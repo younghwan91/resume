@@ -30,13 +30,18 @@ jobs:
           working_directory: ko
           latexmk_use_xelatex: true
 
+      - name: Rename PDFs for release
+        run: |
+          cp en/resume.pdf resume_en.pdf
+          cp ko/resume.pdf resume_ko.pdf
+
       - name: Upload PDFs as artifacts
         uses: actions/upload-artifact@v4
         with:
           name: resume-pdfs
           path: |
-            en/resume.pdf
-            ko/resume.pdf
+            resume_en.pdf
+            resume_ko.pdf
 
       - name: Release PDFs on push to main
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
@@ -45,6 +50,6 @@ jobs:
           tag_name: latest
           name: Latest Resume
           files: |
-            en/resume.pdf
-            ko/resume.pdf
+            resume_en.pdf
+            resume_ko.pdf
           body: "Auto-built from latest source."
