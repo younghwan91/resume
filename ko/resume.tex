@@ -1,0 +1,170 @@
+%-------------------------
+% 채영환 (Younghwan Chae) - 이력서 (국문)
+%-------------------------
+
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{kotex}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{geometry}
+\input{glyphtounicode}
+
+\geometry{top=0.5in, bottom=0.5in, left=0.6in, right=0.6in}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{\item\small{#1 \vspace{-2pt}}}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+\begin{document}
+
+%---------- 헤더 ----------
+\begin{center}
+    {\Huge \scshape 채영환 (Younghwan Chae)} \\ \vspace{4pt}
+    \small
+    경기도 성남 $|$
+    \href{mailto:chyohw97@gmail.com}{chyohw97@gmail.com} $|$
+    010-8554-7840 $|$
+    \href{https://linkedin.com/in/younghwanchae}{linkedin.com/in/younghwanchae}
+\end{center}
+
+%---------- 프로필 요약 ----------
+\section{프로필 요약}
+\small{
+  기계공학 전공으로 딥러닝 최적화 및 물리 기반 AI 시스템 연구·개발에 매진해 왔으며, 로보틱스 및 자율주행에 특화된 퍼셉션 엔지니어. 딥러닝 최적화 알고리즘으로 \textbf{IEEE/Springer 논문 8편} 발표, \textbf{특허 10건+} 출원. 센서 융합, 컴퓨터 비전, 임베디드 ML, 수치 최적화 전문.
+}
+
+%---------- 경력 ----------
+\section{경력}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {두산로보틱스 (Doosan Robotics)}{성남}
+      {Sr. ML Engineer, Physical AI Platform Team}{2025년 8월 -- 현재}
+      \resumeItemListStart
+        \resumeItem{협동 로봇 플랫폼의 퍼셉션 및 모션 플래닝을 위한 엔드투엔드 ML 파이프라인 구축}
+        \resumeItem{산업 환경에서의 실시간 객체 탐지, 자세 추정, 장면 이해를 위한 컴퓨터 비전 시스템 개발}
+        \resumeItem{실시간 로봇 애플리케이션을 위한 딥러닝 모델 설계 및 학습}
+        \resumeItem{LLM 기반 온톨로지 프로젝트 (지식 그래프 / AI Wiki) 리딩}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {비트센싱 (bitsensing Inc.)}{성남}
+      {Sr. Perception Engineer, 전문연구요원}{2022년 8월 -- 2025년 8월}
+      \resumeItemListStart
+        \resumeItem{레이더-카메라 센서 융합 시스템 구축: 비선형 호모그래피 및 최적화 기법으로 융합 오차(RMSE) \textbf{51\% 감소}}
+        \resumeItem{자율주행 응용을 위한 멀티센서 객체 추적 알고리즘 \textbf{양산 적용}}
+        \resumeItem{딥러닝 기반 4D 레이더 DoA 추정 모델 개발: 위치 인식 해상도 \textbf{2배 향상}}
+        \resumeItem{신호 잡음 제거, 캘리브레이션, 합성 데이터 생성을 포함한 AI 파이프라인 설계}
+        \resumeItem{센서 융합, 신호 모델링, AI 기반 인식 관련 \textbf{특허 10건+} 출원 (국내 및 해외 US, EP)}
+        \resumeItem{Tech: Python, PyTorch, C/C++, CUDA, OpenCV, 레이더 신호 처리}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {University of Pretoria}{프리토리아, 남아프리카 공화국}
+      {박사과정 연구원}{2015년 1월 -- 2021년 12월}
+      \resumeItemListStart
+        \resumeItem{박사 연구: Non-convex 고노이즈 환경에서의 딥러닝 최적화 알고리즘}
+        \resumeItem{GOALS (경사 기반 선탐색 근사) 옵티마이저 제안 및 학습 안정성·수렴성 개선; \textit{Applied Intelligence}, Springer Nature 게재 (2023)}
+        \resumeItem{고차원 최적화 문제를 위한 부분차원 대리모델 기법 개발; \textit{Advances in AI Reviews}, IFSA 게재 (2019)}
+        \resumeItem{FEM 시뮬레이션 기반 최적 센서 배치 연구 (역문제 및 데이터 기반 전략)}
+        \resumeItem{전 학위 \textbf{Cum Laude} 졸업; 남아프리카 공화국 전국 수학 올림피아드 Top 100}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%---------- 학력 ----------
+\section{학력}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {University of Pretoria}{남아프리카 공화국}
+      {공학박사 (Ph.D.), 기계공학 --- Research-based}{2017 -- 2021}
+
+    \resumeSubheading
+      {University of Pretoria}{남아프리카 공화국}
+      {공학석사 (MEng), 기계공학 --- Cum Laude}{2016}
+
+    \resumeSubheading
+      {University of Pretoria}{남아프리카 공화국}
+      {공학학사 우등 (BEng Honours), 기계공학 --- Cum Laude}{2015}
+
+    \resumeSubheading
+      {University of Pretoria}{남아프리카 공화국}
+      {공학학사 (BEng), 기계공학 --- Cum Laude}{2011 -- 2014}
+
+  \resumeSubHeadingListEnd
+
+%---------- 기술 스택 ----------
+\section{기술 스택}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{프로그래밍 언어}{: Python, C/C++, MATLAB} \\
+     \textbf{프레임워크 \& 라이브러리}{: PyTorch, TensorFlow, OpenCV, CUDA, ONNX, CVXPY, Stable-Baselines3, ML-Agents, NumPy, SciPy} \\
+     \textbf{센서}{: FMCW 레이더 (4D-Imaging), 카메라 (RGB, PTZ), LiDAR, IMU, GPS} \\
+     \textbf{수학 \& 방법론}{: 수치 최적화, 확률 모델링, 대리 모델링, 칼만 필터, 베이즈 추론, 신호 처리} \\
+     \textbf{도구}{: Git, Linux/Unix, Docker, Jupyter, LaTeX, VS Code}
+    }}
+ \end{itemize}
+
+%---------- 주요 논문 ----------
+\section{주요 논문}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+      \textbf{[IEEE Sensors 2025]} S. Kwak, \underline{채영환}, et al. ``Improved accuracy of track-based integration of radar and vision sensors.'' (공동 1저자) \\[2pt]
+      \textbf{[IEEE RadarConf 2024]} H.I. Baek, \underline{채영환}, et al. ``Implementation of deep learning-based kick gesture recognition using 60 GHz radar sensor.'' \\[2pt]
+      \textbf{[Springer Nature 2023]} \underline{채영환}, D.N. Wilke, D. Kafka. ``Gradient-only surrogate to resolve learning rates for robust and consistent training of deep neural networks.'' \textit{Applied Intelligence}. \\[2pt]
+      \textbf{[IFSA 2019]} \underline{채영환}, D.N. Wilke. ``Sub-dimensional surrogates to solve high-dimensional optimization problems in machine learning.'' \textit{Advances in AI Reviews}.
+    }}
+ \end{itemize}
+
+%---------- 수상 ----------
+\section{수상 경력}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+      2010 남아프리카 공화국 전국 수학 올림피아드 Top 100, 주(State) 2위 \\
+      2011 골든 키 국제 우등 협회 회원 (Golden Key International Honour Society) \\
+      2015 기계공학 학사 우수 학업상 및 학업 표창 (Achievement Award \& Academic Honorary Colours) \\
+      2017 기계공학 석사 학업 표창 (Academic Honorary Colours)
+    }}
+ \end{itemize}
+
+%-------------------------------------------
+\end{document}
