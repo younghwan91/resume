@@ -1,13 +1,15 @@
 # Younghwan Chae — Resume
 
+[![Build Resume PDFs](https://github.com/younghwan91/resume/actions/workflows/build.yml/badge.svg)](https://github.com/younghwan91/resume/actions/workflows/build.yml)
+
 LaTeX source for my resume, with automatic PDF build via GitHub Actions.
 
 ## Download
 
 | Version | Link |
 |---------|------|
-| English | [resume_en.pdf](../../releases/latest/download/resume.pdf) |
-| Korean  | [resume_ko.pdf](../../releases/latest/download/resume.pdf) |
+| English | [resume_en.pdf](https://github.com/younghwan91/resume/releases/latest/download/resume_en.pdf) |
+| Korean  | [resume_ko.pdf](https://github.com/younghwan91/resume/releases/latest/download/resume_ko.pdf) |
 
 ## Structure
 
