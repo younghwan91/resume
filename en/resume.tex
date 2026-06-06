@@ -1,0 +1,181 @@
+%-------------------------
+% Younghwan Chae - Resume (English)
+% Based on sb2nov/resume template (MIT License)
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{geometry}
+\input{glyphtounicode}
+
+\geometry{top=0.5in, bottom=0.5in, left=0.5in, right=0.5in}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{\item\small{#1 \vspace{-2pt}}}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+\begin{document}
+
+%---------- HEADING ----------
+\begin{center}
+    {\Huge \scshape Younghwan Chae} \\ \vspace{4pt}
+    \small
+    Seongnam, South Korea $|$
+    \href{mailto:chyohw97@gmail.com}{chyohw97@gmail.com} $|$
+    \href{https://linkedin.com/in/younghwanchae}{linkedin.com/in/younghwanchae} $|$
+    \href{https://github.com/younghwan91}{github.com/younghwan91}
+\end{center}
+
+%---------- SUMMARY ----------
+\section{Summary}
+\small{
+  Optimization Engineer building Physical AI systems for robotics and autonomous driving. PhD in optimization algorithms for deep learning with \textbf{8 IEEE/Springer publications} and \textbf{10+ patents}. Expertise spanning sensor fusion, computer vision, embedded ML, and mathematical optimization.
+}
+
+%---------- EXPERIENCE ----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Doosan Robotics}{Seongnam, South Korea}
+      {Sr. ML Engineer, Physical AI Platform Team}{Aug 2025 -- Present}
+      \resumeItemListStart
+        \resumeItem{Building end-to-end ML pipelines for robotic perception and motion planning on collaborative robot platforms}
+        \resumeItem{Developing computer vision systems for real-time object detection, pose estimation, and scene understanding}
+        \resumeItem{Designing and training deep learning models for real-time robotic applications}
+        \resumeItem{Leading LLM-based ontology project (knowledge graph / AI Wiki)}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {bitsensing Inc.}{Seongnam, South Korea}
+      {Sr. Perception Engineer (Skilled Industrial Personnel)}{Aug 2022 -- Aug 2025}
+      \resumeItemListStart
+        \resumeItem{Built production-grade radar-camera sensor fusion system, reducing fusion error (RMSE) by \textbf{51\%} via novel non-linear homography and optimization techniques}
+        \resumeItem{Shipped multi-sensor object tracking algorithms to \textbf{mass production} for autonomous driving applications}
+        \resumeItem{Developed deep learning-based 4D radar DoA estimation model, achieving \textbf{2$\times$ resolution improvement}}
+        \resumeItem{Designed ML pipeline for signal denoising, calibration, and synthetic data generation for radar signal processing}
+        \resumeItem{Filed \textbf{10+ patents} in sensor fusion, signal modeling, and AI-based recognition (including US, EP)}
+        \resumeItem{Tech: Python, PyTorch, C/C++, CUDA, OpenCV, radar signal processing}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {University of Pretoria}{Pretoria, South Africa}
+      {Postgraduate Researcher}{Jan 2015 -- Dec 2021}
+      \resumeItemListStart
+        \resumeItem{PhD research: optimization algorithms for deep learning in non-convex, noisy loss landscapes}
+        \resumeItem{Proposed GOALS (Gradient-Only Approximations for Line Searches), improving training stability and convergence; published in \textit{Applied Intelligence}, Springer Nature (2023)}
+        \resumeItem{Developed sub-dimensional surrogate modeling for high-dimensional optimization; published in \textit{Advances in AI Reviews}, IFSA (2019)}
+        \resumeItem{Research on optimal sensor placement via FEM-based simulation and data-driven strategies}
+        \resumeItem{All degrees graduated \textbf{Cum Laude}; South African Math Olympiad National Top 100 Finalist}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%---------- EDUCATION ----------
+\section{Education}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {University of Pretoria}{Pretoria, South Africa}
+      {Doctor of Philosophy, Mechanical Engineering}{2017 -- 2021}
+
+    \resumeSubheading
+      {University of Pretoria}{Pretoria, South Africa}
+      {Master of Engineering (MEng), Mechanical Engineering --- Cum Laude}{2016}
+
+    \resumeSubheading
+      {University of Pretoria}{Pretoria, South Africa}
+      {Bachelor of Engineering (Honours), Mechanical Engineering --- Cum Laude}{2015}
+
+    \resumeSubheading
+      {University of Pretoria}{Pretoria, South Africa}
+      {Bachelor of Engineering, Mechanical Engineering --- Cum Laude}{2011 -- 2014}
+
+  \resumeSubHeadingListEnd
+
+%---------- SKILLS ----------
+\section{Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, C/C++, MATLAB} \\
+     \textbf{Frameworks \& Libraries}{: PyTorch, TensorFlow, OpenCV, CUDA, ONNX, CVXPY, Stable-Baselines3, ML-Agents, NumPy, SciPy} \\
+     \textbf{Sensors}{: FMCW Radar (4D-Imaging), Camera (RGB, PTZ), LiDAR, IMU, GPS} \\
+     \textbf{Math \& Methods}{: Numerical Optimization, Probabilistic Modeling, Surrogate Modeling, Kalman Filter, Bayesian Inference, Signal Processing} \\
+     \textbf{Tools}{: Git, Linux/Unix, Docker, Jupyter, LaTeX, VS Code}
+    }}
+ \end{itemize}
+
+%---------- PUBLICATIONS ----------
+\section{Selected Publications}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+      \textbf{[IEEE 2025]} S. Kwak, \underline{Y. Chae}, et al. ``Improved accuracy of track-based integration of radar and vision sensors.'' \textit{IEEE Sensors}. \\[2pt]
+      \textbf{[IEEE 2024]} H.I. Baek, \underline{Y. Chae}, et al. ``Implementation of deep learning-based kick gesture recognition using 60 GHz radar sensor.'' \textit{IEEE Radar Conference}. \\[2pt]
+      \textbf{[Springer 2023]} \underline{Y. Chae}, D.N. Wilke, D. Kafka. ``Gradient-only surrogate to resolve learning rates for robust and consistent training of deep neural networks.'' \textit{Applied Intelligence}, Springer Nature. \\[2pt]
+      \textbf{[IFSA 2019]} \underline{Y. Chae}, D.N. Wilke. ``Sub-dimensional surrogates to solve high-dimensional optimization problems in machine learning.'' \textit{Advances in AI Reviews}.
+    }}
+ \end{itemize}
+
+%-------------------------------------------
+\end{document}

@@ -1,0 +1,47 @@
+name: Build Resume PDFs
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build English resume
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: resume.tex
+          working_directory: en
+          latexmk_use_xelatex: true
+
+      - name: Build Korean resume
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: resume.tex
+          working_directory: ko
+          latexmk_use_xelatex: true
+
+      - name: Upload PDFs as artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: resume-pdfs
+          path: |
+            en/resume.pdf
+            ko/resume.pdf
+
+      - name: Release PDFs on push to main
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          name: Latest Resume
+          files: |
+            en/resume.pdf
+            ko/resume.pdf
+          body: "Auto-built from latest source."
