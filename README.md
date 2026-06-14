@@ -4,7 +4,7 @@
 
 PhD-trained ML/AI & optimization engineer — Physical AI, sensor fusion, and real-time embedded inference, with **8 peer-reviewed publications and 10 patents**. Currently applying numerical optimization and machine learning to **quantitative trading systems**.
 
-**Links:** [LinkedIn](https://linkedin.com/in/younghwanchae) · [GitHub](https://github.com/younghwan91) · [Email](mailto:chyohw97@gmail.com)
+**Links:** [LinkedIn](https://www.linkedin.com/in/younghwan-chae/) · [GitHub](https://github.com/younghwan91) · [Email](mailto:chyohw97@gmail.com)
 
 ## Download
 
