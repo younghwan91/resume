@@ -1,0 +1,12 @@
+# Confidential material — tracked in a separate PRIVATE repo
+private/
+
+# OMC orchestration state
+.omc/
+
+# Local LaTeX engine (downloaded via tectonic installer)
+/tectonic
+
+# Locally built PDFs (CI builds and releases these)
+en/resume.pdf
+ko/resume.pdf

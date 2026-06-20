@@ -86,7 +86,7 @@
 %-----------SUMMARY-----------
 \section{Summary}
 \small{
-PhD-trained optimization engineer with \textbf{8 peer-reviewed publications} and \textbf{10 patents} building Physical AI systems for robotics and autonomous driving. Proven track record of shipping production ML systems — reduced radar-camera fusion error by 51\%, doubled DoA estimation resolution. Deep expertise across the full stack: mathematical optimization, sensor fusion, computer vision, and real-time embedded inference.
+PhD-trained ML engineer with \textbf{6 peer-reviewed publications \& 2 preprints} and \textbf{10 patents}, spanning autonomous-driving perception, industrial robotics, and ML infrastructure. Shipped Camera/Radar/LiDAR \textbf{multi-sensor perception} to \textbf{mass production} (200+ deployments in 8 countries, 8-class obstacle detection, \textbf{51\%} lower fusion error); developed 3D radar perception (\textbf{BEV} tracking, \textbf{2$\times$} radar resolution). At Doosan, built transformer-based 3D perception (\textbf{RF-DETR}, mAP@0.5 94\%) and the team's \textbf{MLOps} stack (DVC/Kubeflow/BentoML). Deep full-stack expertise: numerical optimization, sensor fusion, computer vision, and real-time embedded inference.
 }
 
 %-----------EXPERIENCE-----------
@@ -95,41 +95,42 @@ PhD-trained optimization engineer with \textbf{8 peer-reviewed publications} and
 
     \resumeSubheading
       {Doosan Robotics}{Seongnam, South Korea}
-      {Sr. ML Engineer --- Physical AI Platform Team}{Aug 2025 -- Present}
+      {Data Scientist \& ML Engineer --- Physical AI Platform Team}{Aug 2025 -- Present}
       \resumeItemListStart
-        \resumeItem{Building end-to-end ML pipelines for robotic perception and motion planning on collaborative robot platforms}
-        \resumeItem{Developing real-time computer vision systems for object detection, pose estimation, and scene understanding in industrial environments}
-        \resumeItem{Designing and training deep learning models for on-device robotic inference}
-        \resumeItem{Leading LLM-based ontology project for structured knowledge representation (AI Wiki)}
+        \resumeItem{Built a transformer-based vision pipeline (\textbf{RF-DETR} + depth fusion + SAM-derived 3D pose) for industrial depalletizing --- \textbf{mAP@0.5 94.2\%}, $\sim$150\,ms end-to-end, cutting cycle time \textbf{47\%} and error rate \textbf{85\%}}
+        \resumeItem{Automated robotic sanding \textbf{coverage-path generation} from raw 3D scans (RBF surface reconstruction at sub-0.5\,mm RMSE $+$ \textbf{curvature-adaptive path optimization} with surface-normal-aligned tool orientation), replacing a 2--4\,h manual process with a 5--15\,s pipeline (\textbf{$\sim$99\% reduction}); integrated as an \textbf{agentic skill} in the team's \textbf{Agentic Robot OS}. In an \textbf{internal technical evaluation}, the surface-fitting POC outperformed a competing external solution, contributing to a major strategic sourcing decision}
+        \resumeItem{Stood up the team \textbf{MLOps} stack (DVC versioning, Kubeflow training, BentoML serving + Prometheus/Grafana) and KPI frameworks; sole maintainer of the team's plan-as-PR planning workflow}
+        \resumeItem{Led an \textbf{LLM + knowledge-graph} system (OWL/RDF ontology, hybrid vector+graph+keyword retrieval, cited Q\&A) and a single-camera imitation-learning data pipeline for VLA training}
+        \resumeItem{Named \textbf{top performer} in the AI\&SW Division (2025); led Stanford REAL Lab collaboration proposal for joint manipulation research (2026 cycle)}
       \resumeItemListEnd
 
     \resumeSubheading
       {bitsensing Inc.}{Seongnam, South Korea}
-      {Sr. Perception Engineer --- Signal Processing Team (Skilled Industrial Personnel)}{Sep 2023 -- Aug 2025}
+      {AI Perception Engineer --- Signal Processing Team (Skilled Industrial Personnel)}{Sep 2023 -- Aug 2025}
       \resumeItemListStart
-        \resumeItem{Led deep learning research for 4D radar DoA estimation, achieving \textbf{2$\times$ angular resolution improvement} over conventional methods}
-        \resumeItem{Designed ML pipeline for radar signal denoising, bias correction, and synthetic data generation for model training}
-        \resumeItem{Implemented lightweight deep learning inference models optimized for real-time embedded deployment}
+        \resumeItem{Developed \textbf{3D radar obstacle detection and tracking} models --- \textbf{PV-RCNN} and \textbf{DGCNN} for 3D point-cloud detection; \textbf{CenterPoint} (\textbf{BEV}) and \textbf{AB3DMOT} for 3D multi-object tracking; DL-based 4D radar super-resolution achieving \textbf{2$\times$ angular resolution improvement}}
+        \resumeItem{Built ML pipeline for signal denoising, bias correction, and synthetic data generation; compressed models via \textbf{knowledge distillation}, pruning, and \textbf{TensorRT} for real-time embedded deployment without accuracy regression}
         \resumeItem{Filed \textbf{7 patents} in AI-based signal processing, uncertainty quantification, and embedded learning}
       \resumeItemListEnd
 
     \resumeSubSubheading
       {Sensor Fusion Engineer --- Tracking and Application Team (Skilled Industrial Personnel)}{Aug 2022 -- Sep 2023}
       \resumeItemListStart
-        \resumeItem{Built production-grade radar-camera sensor fusion system, reducing fusion RMSE by \textbf{51\%} via novel non-linear homography and optimization}
-        \resumeItem{Shipped multi-sensor object tracking algorithm to \textbf{mass production} for autonomous driving}
+        \resumeItem{Built a Camera/Radar/LiDAR \textbf{fusion perception system}: \textbf{YOLO-based 8-class obstacle detection} (vehicle, pedestrian, motorcycle, etc.), \textbf{SORT/IMM/Kalman} multi-object tracking of up to \textbf{256 targets across 12 lanes}, lane \textbf{semantic segmentation} (PP-LiteSeg, U-Net), and ML-based false-positive removal --- fusion RMSE \textbf{51\% lower} via non-linear homography, camera calibration, and multi-view geometry}
+        \resumeItem{Shipped to \textbf{mass production} and deployed across \textbf{200+ installations in 8 countries} (Italy, India, Korea, etc.); edge-optimized via \textbf{TensorRT} with stable performance in adverse weather}
         \resumeItem{Developed and productized auto-calibration motor control system for traffic radar (optimal FOV maintenance)}
         \resumeItem{Filed \textbf{3 patents} in sensor fusion and probabilistic object tracking}
       \resumeItemListEnd
 
     \resumeSubheading
       {University of Pretoria}{Pretoria, South Africa}
-      {Postgraduate Researcher}{Jan 2015 -- Dec 2021}
+      {Postgraduate Researcher \& Assistant Lecturer}{Jan 2015 -- Dec 2021}
       \resumeItemListStart
         \resumeItem{PhD: proposed GOALS (Gradient-Only Approximations for Line Searches), improving training stability and convergence in non-convex, noisy loss landscapes; published in \textit{Applied Intelligence}, Springer Nature}
         \resumeItem{Developed sub-dimensional surrogate modeling for high-dimensional ML optimization; published in \textit{Advances in AI Reviews}, IFSA}
         \resumeItem{Designed data-driven optimal sensor placement strategies using FEM-based simulation and rank-variance formulation; published in \textit{Engineering Structures}, Elsevier}
-        \resumeItem{All four degrees graduated \textbf{Cum Laude}; South African Math Olympiad National Top 100 Finalist}
+        \resumeItem{\textbf{Assistant Lecturer}: taught Mathematical Optimization and Numerical Analysis to undergraduate engineering students}
+        \resumeItem{All four degrees graduated \textbf{Cum Laude}}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -156,9 +157,9 @@ PhD-trained optimization engineer with \textbf{8 peer-reviewed publications} and
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
      \textbf{Languages}{: Python, C/C++, MATLAB} \\
-     \textbf{ML \& Scientific}{: PyTorch, TensorFlow, OpenCV, CUDA, ONNX, CVXPY, Stable-Baselines3, ML-Agents, NumPy, SciPy, scikit-learn} \\
-     \textbf{Sensors}{: FMCW Radar (4D-Imaging), Camera (RGB, PTZ), LiDAR, IMU, GPS} \\
-     \textbf{Domains}{: Numerical Optimization, Sensor Fusion, Signal Processing, Probabilistic Modeling, Kalman Filter, Bayesian Inference, Surrogate Modeling, Reinforcement Learning} \\
+     \textbf{ML \& Scientific}{: PyTorch, Transformers (DETR/CenterPoint), CNNs (YOLO, PV-RCNN, DGCNN), SAM, LoRA/PEFT, Knowledge Distillation, TensorRT, TensorFlow, OpenCV, CUDA, ONNX, CVXPY, Stable-Baselines3, ML-Agents, MuJoCo, NumPy, SciPy, scikit-learn} \\
+     \textbf{Sensors}{: FMCW Radar (4D-Imaging), Camera (RGB, PTZ, RealSense, Zivid), LiDAR, IMU, GPS} \\
+     \textbf{Domains}{: Numerical Optimization, Sensor Fusion, Signal Processing, 3D Perception, Point Cloud Processing, Monocular Depth Estimation, Visual SLAM, Semantic Segmentation, Self-supervised Learning, Probabilistic Modeling, Kalman Filter, Bayesian Inference, Surrogate Modeling, Reinforcement Learning} \\
      \textbf{Tools}{: Git, Docker, Linux/Unix, Jupyter, \LaTeX, VS Code, MySQL}
     }}
  \end{itemize}
@@ -168,10 +169,14 @@ PhD-trained optimization engineer with \textbf{8 peer-reviewed publications} and
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
       \textbf{[IEEE Sensors '25]}\enspace S. Kwak, \underline{Y. Chae}, M. Choi, et al. ``Improved accuracy of track-based integration of radar and vision sensors.'' \textit{IEEE Sensors}. \textit{(Co-first author)} \\[3pt]
+      \textbf{[IEEE Sensors '24]}\enspace C. Park, H.I. Baek, \underline{Y. Chae}, H.S. Lim, et al. ``Deep learning-based kick motion recognition in millimeter wave band radar system.'' \textit{IEEE Sensors}. \\[3pt]
       \textbf{[IEEE RadarConf '24]}\enspace H.I. Baek, \underline{Y. Chae}, H.S. Lim, et al. ``Implementation of deep learning-based kick gesture recognition using 60 GHz radar sensor.'' \\[3pt]
       \textbf{[Springer Nature '23]}\enspace \underline{Y. Chae}, D.N. Wilke, D. Kafka. ``Gradient-only surrogate to resolve learning rates for robust and consistent training of deep neural networks.'' \textit{Applied Intelligence}. \\[3pt]
       \textbf{[IFSA '19]}\enspace \underline{Y. Chae}, D.N. Wilke. ``Sub-dimensional surrogates to solve high-dimensional optimization problems in machine learning.'' \textit{Advances in AI Reviews}. \\[3pt]
-      \textbf{[Elsevier '17]}\enspace \underline{Y. Chae}, D.N. Wilke. ``Heuristic linear algebraic rank-variance formulation for efficient sensor placement.'' \textit{Engineering Structures}.
+      \textbf{[Elsevier '17]}\enspace \underline{Y. Chae}, D.N. Wilke. ``Heuristic linear algebraic rank-variance formulation for efficient sensor placement.'' \textit{Engineering Structures}. \\[6pt]
+      \textsc{Preprints} \\[2pt]
+      \textbf{[arXiv '21]}\enspace \underline{Y. Chae}, D.N. Wilke, D. Kafka. ``GOALS: Gradient-only approximations for line searches towards robust and consistent training of deep neural networks.'' arXiv:2105.10915. \textit{($\to$ published as Applied Intelligence, 2023)} \\[3pt]
+      \textbf{[arXiv '19]}\enspace \underline{Y. Chae}. ``Empirical study towards understanding line search approximations for training neural networks.'' arXiv:1909.06893.
     }}
  \end{itemize}
 
@@ -197,6 +202,7 @@ PhD-trained optimization engineer with \textbf{8 peer-reviewed publications} and
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
       2017\enspace Academic Honorary Colours, MEng --- University of Pretoria \\
+      2016\enspace Merit Certificate for Academics, BEng Honours --- University of Pretoria \\
       2015\enspace Achievement Award \& Academic Honorary Colours, BEng --- University of Pretoria \\
       2011\enspace Golden Key International Honour Society \\
       2010\enspace South African National Mathematics Olympiad Top 100; 2nd in State
