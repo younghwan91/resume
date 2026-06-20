@@ -73,7 +73,7 @@
 %-----------프로필 요약-----------
 \section{프로필 요약}
 \small{
-박사급 최적화 엔지니어. \textbf{IEEE/Springer 논문 8편}, \textbf{특허 10건}을 보유하며 로보틱스 및 자율주행을 위한 Physical AI 시스템을 연구·개발. 레이더-카메라 융합 오차 51\% 감소, DoA 추정 해상도 2배 향상 등 실제 양산 적용 실적 보유. 수치 최적화, 센서 융합, 컴퓨터 비전, 임베디드 추론 전 영역 심층 전문성.
+박사급 ML 엔지니어. \textbf{게재 논문 6편 \& arXiv 2편}, \textbf{특허 10건} 보유. 자율주행 퍼셉션, 산업 로보틱스, ML 인프라를 아우름. Camera/Radar/LiDAR \textbf{멀티센서 퍼셉션}을 \textbf{양산 적용}(해외 8개국 200대+ 배포, 8종 장애물 탐지, 융합 오차 \textbf{51\% 감소}); 3D 레이더 퍼셉션 개발(\textbf{BEV} 추적, 레이더 해상도 \textbf{2배}). 두산에서 트랜스포머 기반 3D 퍼셉션(\textbf{RF-DETR}, mAP@0.5 94\%) 및 팀 \textbf{MLOps} 스택(DVC/Kubeflow/BentoML) 구축. 수치 최적화·센서 융합·컴퓨터 비전·임베디드 추론 전 영역 심층 전문성.
 }
 
 %-----------경력-----------
@@ -82,41 +82,42 @@
 
     \resumeSubheading
       {두산로보틱스 (Doosan Robotics)}{성남}
-      {Sr. ML Engineer --- Physical AI Platform Team}{2025년 8월 -- 현재}
+      {Data Scientist \& ML Engineer --- Physical AI Platform Team}{2025년 8월 -- 현재}
       \resumeItemListStart
-        \resumeItem{협동 로봇 플랫폼의 퍼셉션 및 모션 플래닝을 위한 엔드투엔드 ML 파이프라인 구축}
-        \resumeItem{산업 환경에서의 실시간 객체 탐지, 자세 추정, 장면 이해를 위한 컴퓨터 비전 시스템 개발}
-        \resumeItem{온디바이스 로봇 추론을 위한 딥러닝 모델 설계 및 학습}
-        \resumeItem{LLM 기반 온톨로지 프로젝트 (구조화된 지식 표현 / AI Wiki) 리딩}
+        \resumeItem{산업용 디팔레타이징을 위한 트랜스포머 기반 비전 파이프라인 구축(\textbf{RF-DETR} + 뎁스 융합 + SAM 기반 3D 자세) --- \textbf{mAP@0.5 94.2\%}, 종단 약 150\,ms, 사이클 타임 \textbf{47\%}·오류율 \textbf{85\%} 감소}
+        \resumeItem{원시 3D 스캔에서 로봇 샌딩 \textbf{커버리지 경로 자동 생성}(RBF 표면 복원 RMSE 0.5\,mm 이하 $+$ \textbf{곡률 적응형 경로 최적화}·표면 법선 정렬 공구 자세) --- 2--4시간 수작업을 5--15초 파이프라인으로 대체(\textbf{약 99\% 단축}); 팀의 \textbf{Agentic Robot OS}에 \textbf{에이전틱 스킬}로 통합. \textbf{내부 기술 검증}에서 이 표면 피팅 POC가 경쟁 외부 솔루션을 능가, 주요 전략적 소싱 의사결정에 기여}
+        \resumeItem{팀 \textbf{MLOps} 스택(DVC 버저닝, Kubeflow 학습, BentoML 서빙 + Prometheus/Grafana) 및 KPI 프레임워크 구축, plan-as-PR 계획 워크플로 단독 운영}
+        \resumeItem{\textbf{LLM + 지식 그래프} 시스템(OWL/RDF 온톨로지, 벡터+그래프+키워드 하이브리드 검색, 출처 기반 Q\&A) 및 단일 카메라 모방학습 데이터 파이프라인(VLA 학습용) 리딩}
+        \resumeItem{AI\&SW 부문 \textbf{최우수 성과자}(2025) 선정; Stanford REAL Lab 공동 매니퓰레이션 연구 협업 제안 주도 (2026년 논문 목표)}
       \resumeItemListEnd
 
     \resumeSubheading
       {비트센싱 (bitsensing Inc.)}{성남}
-      {AI Engineer --- Signal Processing Team, 전문연구요원}{2023년 9월 -- 2025년 8월}
+      {AI Perception Engineer --- Signal Processing Team, 전문연구요원}{2023년 9월 -- 2025년 8월}
       \resumeItemListStart
-        \resumeItem{딥러닝 기반 4D 레이더 DoA 추정 연구 주도 --- 기존 대비 \textbf{각도 해상도 2배 향상}}
-        \resumeItem{레이더 신호 잡음 제거, 바이어스 보정, 합성 데이터 생성을 포함한 AI 파이프라인 설계}
-        \resumeItem{실시간 임베디드 환경에 최적화된 경량 딥러닝 추론 모델 구현}
+        \resumeItem{자율주행용 \textbf{3D 레이더 장애물 탐지·추적} 모델 개발 --- 3D 포인트 클라우드 탐지에 \textbf{PV-RCNN} 및 \textbf{DGCNN}; 3D 다중 객체 추적에 \textbf{CenterPoint}(\textbf{BEV}) 및 \textbf{AB3DMOT}; 4D 레이더 초해상도 DoA 추정으로 \textbf{각도 해상도 2배 향상}}
+        \resumeItem{신호 잡음 제거·바이어스 보정·합성 데이터 생성 ML 파이프라인 구축; \textbf{지식 증류}, 프루닝, \textbf{TensorRT}로 모델 압축 --- 정확도 저하 없이 실시간 임베디드 배포}
         \resumeItem{AI 기반 신호 처리, 불확실성 정량화, 임베디드 학습 관련 \textbf{특허 7건} 출원}
       \resumeItemListEnd
 
     \resumeSubSubheading
       {Sensor Fusion Engineer --- Tracking and Application Team, 전문연구요원}{2022년 8월 -- 2023년 9월}
       \resumeItemListStart
-        \resumeItem{레이더-카메라 센서 융합 시스템 구축 --- 비선형 호모그래피 및 최적화 기법으로 융합 RMSE \textbf{51\% 감소}}
-        \resumeItem{자율주행 응용을 위한 멀티센서 객체 추적 알고리즘 \textbf{양산 적용}}
+        \resumeItem{Camera/Radar/LiDAR \textbf{융합 퍼셉션 시스템} 구축 --- \textbf{YOLO 기반 8종 장애물 탐지}(차량·보행자·오토바이 등), \textbf{SORT/IMM/칼만} 기반 최대 \textbf{12개 차선 256대 동시 MOT}, 차선 \textbf{시맨틱 세그멘테이션}(PP-LiteSeg, U-Net), ML 기반 오탐 제거 --- 융합 RMSE \textbf{51\% 감소}}
+        \resumeItem{\textbf{양산 적용} 및 \textbf{해외 8개국 200대+ 배포}(이탈리아 베로나, 인도 델리 등); \textbf{TensorRT} 엣지 최적화로 악천후 환경에서도 안정적 성능}
         \resumeItem{트래픽 레이더 최적 화각 유지를 위한 자동 캘리브레이션 모터 제어 시스템 개발 및 제품화}
         \resumeItem{센서 융합 및 확률적 객체 추적 관련 \textbf{특허 3건} 출원}
       \resumeItemListEnd
 
     \resumeSubheading
       {University of Pretoria}{프리토리아, 남아프리카 공화국}
-      {박사과정 연구원}{2015년 1월 -- 2021년 12월}
+      {박사과정 연구원 \& 강의 조교 (Assistant Lecturer)}{2015년 1월 -- 2021년 12월}
       \resumeItemListStart
         \resumeItem{박사 연구: GOALS (경사 기반 선탐색 근사) 제안 --- Non-convex 고노이즈 환경에서의 학습 안정성·수렴성 개선; \textit{Applied Intelligence}, Springer Nature 게재}
         \resumeItem{고차원 ML 최적화를 위한 부분차원 대리모델 기법 개발; \textit{Advances in AI Reviews}, IFSA 게재}
         \resumeItem{FEM 시뮬레이션 기반 최적 센서 배치 연구 (역문제 및 랭크-분산 정식화); \textit{Engineering Structures}, Elsevier 게재}
-        \resumeItem{전 학위 \textbf{Cum Laude} 졸업; 남아프리카 공화국 전국 수학 올림피아드 Top 100, 주(State) 2위}
+        \resumeItem{\textbf{Assistant Lecturer}: 학부 공학생 대상 수치 최적화 및 수치해석 강의}
+        \resumeItem{전 학위 \textbf{Cum Laude} 졸업}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -143,9 +144,9 @@
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
      \textbf{프로그래밍 언어}{: Python, C/C++, MATLAB} \\
-     \textbf{ML \& 과학 계산}{: PyTorch, TensorFlow, OpenCV, CUDA, ONNX, CVXPY, Stable-Baselines3, ML-Agents, NumPy, SciPy, scikit-learn} \\
-     \textbf{센서}{: FMCW 레이더 (4D-Imaging), 카메라 (RGB, PTZ), LiDAR, IMU, GPS} \\
-     \textbf{전문 영역}{: 수치 최적화, 센서 융합, 신호 처리, 확률 모델링, 칼만 필터, 베이즈 추론, 대리 모델링, 강화학습} \\
+     \textbf{ML \& 과학 계산}{: PyTorch, Transformers (DETR/CenterPoint), CNN (YOLO, PV-RCNN, DGCNN), SAM, LoRA/PEFT, 지식 증류, TensorRT, TensorFlow, OpenCV, CUDA, ONNX, CVXPY, Stable-Baselines3, ML-Agents, MuJoCo, NumPy, SciPy, scikit-learn} \\
+     \textbf{센서}{: FMCW 레이더 (4D-Imaging), 카메라 (RGB, PTZ, RealSense, Zivid), LiDAR, IMU, GPS} \\
+     \textbf{전문 영역}{: 수치 최적화, 센서 융합, 신호 처리, 3D 퍼셉션, 포인트 클라우드 처리, 단안 뎁스 추정, Visual SLAM, 시맨틱 세그멘테이션, 자기지도 학습, 확률 모델링, 칼만 필터, 베이즈 추론, 대리 모델링, 강화학습} \\
      \textbf{도구}{: Git, Docker, Linux/Unix, Jupyter, \LaTeX, VS Code, MySQL}
     }}
  \end{itemize}
@@ -155,10 +156,14 @@
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
       \textbf{[IEEE Sensors '25]}\enspace S. Kwak, \underline{채영환}, M. Choi, et al. ``Improved accuracy of track-based integration of radar and vision sensors.'' \textit{(공동 1저자)} \\[3pt]
+      \textbf{[IEEE Sensors '24]}\enspace C. Park, H.I. Baek, \underline{채영환}, H.S. Lim, et al. ``Deep learning-based kick motion recognition in millimeter wave band radar system.'' \textit{IEEE Sensors}. \\[3pt]
       \textbf{[IEEE RadarConf '24]}\enspace H.I. Baek, \underline{채영환}, H.S. Lim, et al. ``Implementation of deep learning-based kick gesture recognition using 60 GHz radar sensor.'' \\[3pt]
       \textbf{[Springer Nature '23]}\enspace \underline{채영환}, D.N. Wilke, D. Kafka. ``Gradient-only surrogate to resolve learning rates for robust and consistent training of deep neural networks.'' \textit{Applied Intelligence}. \\[3pt]
       \textbf{[IFSA '19]}\enspace \underline{채영환}, D.N. Wilke. ``Sub-dimensional surrogates to solve high-dimensional optimization problems in machine learning.'' \textit{Advances in AI Reviews}. \\[3pt]
-      \textbf{[Elsevier '17]}\enspace \underline{채영환}, D.N. Wilke. ``Heuristic linear algebraic rank-variance formulation for efficient sensor placement.'' \textit{Engineering Structures}.
+      \textbf{[Elsevier '17]}\enspace \underline{채영환}, D.N. Wilke. ``Heuristic linear algebraic rank-variance formulation for efficient sensor placement.'' \textit{Engineering Structures}. \\[6pt]
+      \textsc{사전 공개 논문 (Preprints)} \\[2pt]
+      \textbf{[arXiv '21]}\enspace \underline{채영환}, D.N. Wilke, D. Kafka. ``GOALS: Gradient-only approximations for line searches towards robust and consistent training of deep neural networks.'' arXiv:2105.10915. \textit{($\to$ Applied Intelligence, 2023 게재)} \\[3pt]
+      \textbf{[arXiv '19]}\enspace \underline{채영환}. ``Empirical study towards understanding line search approximations for training neural networks.'' arXiv:1909.06893.
     }}
  \end{itemize}
 
@@ -184,6 +189,7 @@
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
       2017\enspace 기계공학 석사 (MEng) 우등 학업 표창 (Academic Honorary Colours) --- University of Pretoria \\
+      2016\enspace 기계공학 학사 우등 (BEng Honours) 학업 우수 증명서 (Merit Certificate for Academics) \\
       2015\enspace 기계공학 학사 우수 학업상 및 학업 표창 (Achievement Award \& Academic Honorary Colours) \\
       2011\enspace 골든 키 국제 우등 협회 회원 (Golden Key International Honour Society) \\
       2010\enspace 남아프리카 공화국 전국 수학 올림피아드 Top 100, 주(State) 2위
