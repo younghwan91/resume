@@ -1,0 +1,6 @@
+Postgraduate Researcher & Assistant Lecturer Jan 2015 – Dec 2021
+• PhD: proposed GOALS (Gradient-Only Approximations for Line Searches), improving training stability and convergence in non-convex, noisy loss landscapes; published in Applied Intelligence, Springer Nature
+• Developed sub-dimensional surrogate modeling for high-dimensional ML optimization; published in Advances in AI Reviews, IFSA
+• Designed data-driven optimal sensor placement strategies using FEM-based simulation and rank-variance formulation; published in Engineering Structures, Elsevier
+• Assistant Lecturer: taught Mathematical Optimization and Numerical Analysis to undergraduate engineering students
+• Bachelor's, Honours, and Master's degrees graduated Cum Laude
