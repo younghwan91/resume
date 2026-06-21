@@ -1,0 +1,10 @@
+AI Perception Engineer — Signal Processing Team (Technical Research Personnel) Sep 2023 – Aug 2025
+• Developed 3D radar perception systems — point-cloud detection (PV-RCNN), point-feature learning (DGCNN), 3D MOT (CenterPoint-BEV, AB3DMOT); DL-based super-resolution DoA estimation achieving 2× angular resolution improvement
+• Built ML pipeline for signal denoising, bias correction, and synthetic data generation; compressed models via knowledge distillation, pruning, and TensorRT INT8 quantization for real-time embedded deployment without accuracy regression
+• Filed 7 patents in AI-based signal processing, uncertainty quantification, and embedded learning
+
+Sensor Fusion Engineer — Tracking and Application Team (Technical Research Personnel) Aug 2022 – Sep 2023
+• Built a Camera/Radar fusion perception system: YOLO-based 8-class obstacle detection (vehicle, pedestrian, motorcycle, etc.), SORT/IMM/Kalman multi-object tracking of up to 256 targets across 12 lanes, lane semantic segmentation (PP-LiteSeg, U-Net), and ML-based false-positive removal — fusion RMSE 51% lower via non-linear reprojection optimization, camera calibration, and multi-view geometry
+• Shipped to mass production and deployed across 200+ installations in 8 countries (Italy, India, Korea, etc.); edge-optimized via TensorRT with stable performance in adverse weather
+• Developed and productized auto-calibration motor control system for traffic radar (optimal FOV maintenance)
+• Filed 3 patents in sensor fusion and probabilistic object tracking

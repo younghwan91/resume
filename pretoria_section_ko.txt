@@ -1,0 +1,6 @@
+박사과정 연구원 & 강의 조교 (2015년 1월 – 2021년 12월)
+• 박사 연구: GOALS (경사 기반 선탐색 근사) 제안 — Non-convex 고노이즈 환경에서의 학습 안정성·수렴성 개선; Applied Intelligence, Springer Nature 게재
+• 고차원 ML 최적화를 위한 부분차원 대리모델 기법 개발; Advances in AI Reviews, IFSA 게재
+• FEM 시뮬레이션 기반 최적 센서 배치 연구 (역문제 및 랭크-분산 정식화); Engineering Structures, Elsevier 게재
+• Assistant Lecturer: 학부 공학생 대상 수치 최적화 및 수치해석 강의
+• 학부·석사 전 과정(3개 학위) Cum Laude 졸업
