@@ -35,7 +35,7 @@ PDFs are built and published automatically on every push to `main`.
 
 ## Selected Projects
 
-Applying the same optimization and engineering rigor to quantitative finance:
+Independent side projects, unrelated to my day job — applying the same optimization and noisy-signal estimation toolkit used in sensor perception to financial markets, as a demonstration of technical range rather than a change in focus:
 
 | Project | Description |
 |---------|-------------|
