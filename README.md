@@ -16,7 +16,6 @@ PhD-trained ML/AI and optimization engineer specializing in Physical AI, sensor 
 - [Selected Projects](#selected-projects)
 - [Repository Layout](#repository-layout)
 - [Building Locally](#building-locally)
-- [License](#license)
 
 ## Download
 
@@ -69,7 +68,3 @@ cd ko && xelatex resume.tex
 ```
 
 CI builds both versions with `latexmk` in XeLaTeX mode; using `latexmk -xelatex resume.tex` locally will more closely match the CI environment.
-
-## License
-
-Source files are provided for reference. Please do not reuse the content of the résumé itself without permission.
