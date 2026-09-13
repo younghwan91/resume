@@ -39,11 +39,11 @@ Independent side projects, unrelated to my day job — applying the same optimiz
 
 | Project | Description |
 |---------|-------------|
-| [**quantbox-engine**](https://github.com/younghwan91/quantbox-engine) | Strategy-agnostic crypto-futures backtest and execution engine with no-look-ahead guarantees and backtest/live parity |
+| [**crypto-pair-trading**](https://github.com/younghwan91/crypto-pair-trading) | Event-driven crypto pair-trading framework unifying backtesting and live execution |
 | [**kr-quant**](https://github.com/younghwan91/kr-quant) | Korean equity investor-flow collection, Wyckoff-style accumulation screener, and signal validation |
-| [**opt_portfolio**](https://github.com/younghwan91/opt_portfolio) | VAA tactical asset allocation with walk-forward backtesting and Sharpe-ratio weight optimization |
+| [**portfolio-research**](https://github.com/younghwan91/portfolio-research) | US equity factor engine + tactical asset allocation, gated by walk-forward validation (Deflated Sharpe, PBO) |
 
-**Supporting data infrastructure:** [kiwoom-rest-api](https://github.com/younghwan91/kiwoom-rest-api) · [krx-fundamentals-api](https://github.com/younghwan91/krx-fundamentals-api) · [krx-news-rest-api](https://github.com/younghwan91/krx-news-rest-api)
+**Supporting data infrastructure:** [kiwoom-client](https://github.com/younghwan91/kiwoom-client) · [krx-fundamentals-client](https://github.com/younghwan91/krx-fundamentals-client) · [krx-news-client](https://github.com/younghwan91/krx-news-client)
 
 ## Repository Layout
 
