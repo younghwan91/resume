@@ -39,7 +39,7 @@ Independent side projects, unrelated to my day job — applying the same optimiz
 
 | Project | Description |
 |---------|-------------|
-| [**crypto-pair-trading**](https://github.com/younghwan91/crypto-pair-trading) | Event-driven crypto pair-trading framework unifying backtesting and live execution |
+| [**binance-quant-engine**](https://github.com/younghwan91/binance-quant-engine) | Strategy-agnostic Binance USDT-M futures backtest and execution engine with no-look-ahead guarantees and backtest/live parity |
 | [**kr-quant**](https://github.com/younghwan91/kr-quant) | Korean equity investor-flow collection, Wyckoff-style accumulation screener, and signal validation |
 | [**portfolio-research**](https://github.com/younghwan91/portfolio-research) | US equity factor engine + tactical asset allocation, gated by walk-forward validation (Deflated Sharpe, PBO) |
 
