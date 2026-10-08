@@ -71,7 +71,7 @@
 %-----------프로필 요약-----------
 \section{프로필 요약}
 \small{
-\textbf{AV}와 \textbf{로보틱스}를 아우르는 박사급 ML 엔지니어. 카메라(단안·스테레오·구조광), FMCW 4D 이미징 레이더, LiDAR를 직접 운용. \textbf{특허 10건}에 \textbf{논문 6편}. \textbf{멀티센서 퍼셉션을 양산 배포한} 이력(8개국 200대+, 융합 오차 \textbf{51\% 감소}). 3D 퍼셉션 풀스택(\textbf{BEV} 추적, \textbf{PV-RCNN} 탐지, \textbf{RF-DETR} 검출, \textbf{TensorRT INT8} 임베디드 배포)부터 MLOps(DVC/Kubeflow/BentoML), \textbf{LoRA}/PEFT VLA 파인튜닝까지 전 영역에 걸친 심층 전문성.
+\textbf{AV}와 \textbf{로보틱스}를 아우르는 박사급 ML 엔지니어. 카메라(단안·스테레오·구조광), FMCW 4D 이미징 레이더, LiDAR를 직접 운용. \textbf{특허 10건}에 \textbf{논문 6편}. \textbf{멀티센서 퍼셉션을 양산 배포한} 이력(8개국 200대+, 융합 오차 \textbf{51\% 감소}). 3D 퍼셉션 풀스택(\textbf{BEV} 추적, \textbf{PV-RCNN} 탐지, \textbf{RF-DETR} 검출, \textbf{TensorRT INT8} 임베디드 배포), 물리 기반 서로게이트(\textbf{PhysicsNeMo}, FEM 대비 \textbf{약 15,000배 가속})부터 \textbf{LoRA}/PEFT VLA 파인튜닝까지 전 영역에 걸친 심층 전문성.
 }
 
 %-----------경력-----------
@@ -84,7 +84,7 @@
       \resumeItemListStart
         \resumeItem{산업용 디팔레타이징 비전 파이프라인 구축(\textbf{RF-DETR} 검출 + SAM 세그멘테이션 헤드, \textbf{mAP@0.5 94.2\%}) --- \textbf{다중 겹침·부분 가려짐} 환경, 종단 약 150\,ms, 사이클 타임 \textbf{47\%}·오류율 \textbf{85\%} 감소}
         \resumeItem{원시 3D 스캔에서 로봇 샌딩 \textbf{커버리지 경로 자동 생성}(RBF 표면 복원 RMSE 0.5\,mm 이하 $+$ \textbf{곡률 적응형 경로 최적화}·표면 법선 정렬 공구 자세) --- 2--4시간 수작업을 5--15초 파이프라인으로 대체(\textbf{약 99\% 단축}); 팀의 \textbf{Agentic Robot OS}에 \textbf{에이전틱 스킬}로 통합. \textbf{내부 기술 검증}에서 이 표면 피팅 POC가 경쟁 외부 솔루션을 능가, 주요 전략적 소싱 의사결정에 기여}
-        \resumeItem{팀 \textbf{MLOps} 스택(DVC 버저닝, Kubeflow 학습, BentoML 서빙 + Prometheus/Grafana) 및 KPI 프레임워크 구축, plan-as-PR 계획 워크플로 단독 운영}
+        \resumeItem{로봇 샌딩 \textbf{물리 기반 표면 품질 예측 모델} 개발 --- 접촉 압력장 → 누적 일(accumulated work) → 표면 거칠기(\textbf{Ra}) 환산 수식 정립 및 보정 계수 실험 산출; 실험 설계·전처리 후 \textbf{FEM}으로 GT 확보, \textbf{NVIDIA PhysicsNeMo} 서로게이트로 압력장을 수십 분에서 \textbf{ms 단위}로 추론(\textbf{약 15,000배 가속}; 서로게이트 단독 및 \textbf{NVIDIA Newton}(VBD) 시뮬레이션 위 잔차 보정 방식). \textbf{NVIDIA 본사 워크숍}에서 발표 및 기술 교류}
         \resumeItem{\textbf{LLM + 지식 그래프} 시스템(OWL/RDF 온톨로지, 벡터+그래프+키워드 하이브리드 검색, 출처 기반 Q\&A) 및 \textbf{단안 RGB 카메라} 모방학습 파이프라인 구축(사람 시연 영상 → 포즈 추출 → 로봇 액션 공간 변환 → \textbf{VLA} 학습 데이터; \textbf{LoRA} 정책 파인튜닝)}
         \resumeItem{AI\&SW 부문 \textbf{최우수 성과자}(2025) 선정; Stanford REAL Lab 공동 매니퓰레이션 연구 협업 제안에 참여 (2026년 논문 목표)}
       \resumeItemListEnd
@@ -142,9 +142,9 @@
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
      \textbf{프로그래밍 언어}{: Python, C/C++, MATLAB} \\
-     \textbf{ML \& 과학 계산}{: PyTorch, Transformers (DETR/RF-DETR), CNN (YOLO), 3D/포인트클라우드 (PV-RCNN, CenterPoint, DGCNN), SAM, LoRA/PEFT, 지식 증류, TensorRT, TensorFlow, OpenCV, CUDA, ONNX, CVXPY, Stable-Baselines3, ML-Agents, MuJoCo, NumPy, SciPy, scikit-learn} \\
+     \textbf{ML \& 과학 계산}{: PyTorch, Transformers (DETR/RF-DETR), CNN (YOLO), 3D/포인트클라우드 (PV-RCNN, CenterPoint, DGCNN), SAM, LoRA/PEFT, NVIDIA PhysicsNeMo, NVIDIA Newton, 지식 증류, TensorRT, TensorFlow, OpenCV, CUDA, ONNX, CVXPY, Stable-Baselines3, ML-Agents, MuJoCo, NumPy, SciPy, scikit-learn} \\
      \textbf{센서}{: FMCW 레이더 (4D-Imaging), 카메라 (RGB, PTZ, RealSense, Zivid), LiDAR, IMU, GPS} \\
-     \textbf{전문 영역}{: 수치 최적화, 센서 융합, 신호 처리, 3D 퍼셉션, 포인트 클라우드 처리, 단안 뎁스 추정, Visual SLAM, 시맨틱 세그멘테이션, 자기지도 학습, 확률 모델링, 칼만 필터, 베이즈 추론, 대리 모델링, 강화학습} \\
+     \textbf{전문 영역}{: 수치 최적화, FEM 시뮬레이션, 센서 융합, 신호 처리, 3D 퍼셉션, 포인트 클라우드 처리, 단안 뎁스 추정, Visual SLAM, 시맨틱 세그멘테이션, 자기지도 학습, 확률 모델링, 칼만 필터, 베이즈 추론, 대리 모델링, 강화학습} \\
      \textbf{도구}{: Git, Docker, Linux/Unix, Jupyter, \LaTeX, VS Code, MySQL}
     }}
  \end{itemize}
