@@ -11,12 +11,13 @@
 - `.orca/` 는 JD PDF·회사 자료 드롭존 — gitignore 돼 있다. 절대 커밋하지 않는다.
 
 ## 로컬 빌드 (LaTeX 는 설치돼 있다)
-시스템 `xelatex` 는 없지만 레포 루트에 `tectonic` 바이너리가 있다(gitignore). 새로 내려받지 않는다.
+시스템 `xelatex` 는 없지만 메인 체크아웃 `~/git/resume/tectonic` 에 바이너리가 있다(gitignore — 워크트리엔 없으니
+`./tectonic` 말고 이 절대 경로를 쓴다). 새로 내려받지 않는다.
 ```bash
 O=<scratchpad>/build; mkdir -p $O/en $O/ko
 ~/git/resume/tectonic -X compile en/resume.tex --outdir $O/en
 ~/git/resume/tectonic -X compile ko/resume.tex --outdir $O/ko
-uv run -q --with pymupdf python -I -c "import fitz,sys; [print(f, fitz.open(f).page_count) for f in sys.argv[1:]]" $O/en/resume.pdf $O/ko/resume.pdf
+uv run -q --with pymupdf python -I -c "import pymupdf,sys; [print(f, pymupdf.open(f).page_count) for f in sys.argv[1:]]" $O/en/resume.pdf $O/ko/resume.pdf
 ```
 - 빌드 산출물은 scratchpad 로. `en/resume.pdf`·`ko/resume.pdf` 는 gitignore(CI 가 만든다).
 - 수정 뒤에는 고치기 전 PDF(`gh release download latest`)와 쪽수를 비교해 늘지 않았는지 확인한다.
