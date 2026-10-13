@@ -14,6 +14,7 @@
 \usepackage{fancyhdr}
 \usepackage{tabularx}
 \usepackage{geometry}
+\usepackage{needspace}
 
 \geometry{top=0.45in, bottom=0.45in, left=0.6in, right=0.6in}
 
@@ -54,7 +55,7 @@
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[itemsep=0pt]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
@@ -65,13 +66,14 @@
     \textbf{\Huge \scshape 채영환 (Younghwan Chae)} \\ \vspace{3pt}
     \small
     \href{mailto:chyohw97@gmail.com}{\underline{chyohw97@gmail.com}} \quad$|$\quad
-    \href{https://www.linkedin.com/in/younghwan-chae/}{\underline{linkedin.com/in/younghwan-chae}}
+    \href{https://www.linkedin.com/in/younghwan-chae/}{\underline{linkedin.com/in/younghwan-chae}} \quad$|$\quad
+    \href{https://github.com/younghwan91}{\underline{github.com/younghwan91}}
 \end{center}
 
 %-----------프로필 요약-----------
 \section{프로필 요약}
 \small{
-\textbf{AV}와 \textbf{로보틱스}를 아우르는 박사급 ML 엔지니어. 카메라(단안·스테레오·구조광), FMCW 4D 이미징 레이더, LiDAR를 직접 운용. \textbf{특허 10건}에 \textbf{논문 6편}. \textbf{멀티센서 퍼셉션을 양산 배포한} 이력(8개국 200대+, 융합 오차 \textbf{51\% 감소}). 3D 퍼셉션 풀스택(\textbf{BEV} 추적, \textbf{PV-RCNN} 탐지, \textbf{RF-DETR} 검출, \textbf{TensorRT INT8} 임베디드 배포)부터 물리 기반 surrogate 최적화(\textbf{PhysicsNeMo}, FEM 대비 \textbf{약 15,000배 가속}), \textbf{LoRA}/PEFT VLA 파인튜닝까지 전 영역에 걸친 심층 전문성.
+수치 최적화로 박사 학위를 받은 Physical AI·로보틱스 ML 엔지니어(공학박사, 기계공학; \textbf{연구개발 11년} = 산업 4년 + 대학원 연구·강의 7년). \textbf{카메라(단안·스테레오·구조광)}와 \textbf{FMCW 4D 이미징 레이더}를 직접 다룸. 비트센싱에서 \textbf{Camera/Radar 융합 퍼셉션}을 \textbf{양산} 배포(\textbf{8개국 200대+}, 융합 RMSE \textbf{51\% 감소})하고, 3D 레이더 퍼셉션(\textbf{PV-RCNN}, \textbf{BEV} 추적, NVIDIA Jetson \textbf{TensorRT INT8} 배포)과 딥러닝 초해상도 DoA 추정(각도 해상도 \textbf{2배})을 개발. 두산로보틱스에서는 FEM으로 학습한 \textbf{NVIDIA PhysicsNeMo} surrogate(FEM 대비 \textbf{약 15,000배} 가속)를 목적함수로 샌딩 경로를 최적화하고, 3D 스캔 기반 경로 생성을 자동화(2--4시간 → 5--15초)했으며, depalletizing \textbf{RF-DETR} 검출 모델(LoRA 파인튜닝, mAP@0.5 94.2\%)을 담당하고, 단안 카메라 모방학습 데이터 파이프라인과 pick-and-place 정책 학습을 구축. \textbf{특허 출원 10건}, \textbf{논문 6편}.
 }
 
 %-----------경력-----------
@@ -80,86 +82,96 @@
 
     \resumeSubheading
       {두산로보틱스 (Doosan Robotics)}{}
-      {Data Scientist \& ML Engineer --- Physical AI Platform Team}{2025년 8월 -- 현재}
+      {Data Scientist \& ML Engineer (수석) --- Physical AI Platform Team (신설)}{2025년 8월 -- 현재}
       \resumeItemListStart
-        \resumeItem{산업용 depalletizing 비전 파이프라인 구축(\textbf{RF-DETR} 검출 + SAM 세그멘테이션 헤드, \textbf{mAP@0.5 94.2\%}) --- \textbf{다중 겹침·부분 가려짐} 환경, 종단 약 150\,ms, 사이클 타임 \textbf{47\%}·오류율 \textbf{85\%} 감소}
-        \resumeItem{원시 3D 스캔에서 로봇 샌딩 \textbf{coverage path 자동 생성}(RBF 표면 복원 RMSE 0.5\,mm 이하 $+$ \textbf{곡률 적응형 경로 최적화}·표면 법선 정렬 공구 자세) --- 2--4시간 수작업을 5--15초 파이프라인으로 대체(\textbf{약 99\% 단축}); 팀의 \textbf{Agentic Robot OS}에 \textbf{agentic skill}로 통합. \textbf{내부 기술 검증}에서 이 표면 피팅 POC가 경쟁 외부 솔루션을 능가, 주요 전략적 소싱 의사결정에 기여}
-        \resumeItem{로봇 샌딩 \textbf{물리 기반 표면 품질 예측 모델} 개발 --- 접촉 압력장 → accumulated work → 표면 거칠기(\textbf{Ra}) 환산 수식 정립 및 보정 계수 실험 산출; 실험 설계·전처리 후 \textbf{FEM}으로 GT 확보, 이를 \textbf{NVIDIA PhysicsNeMo} surrogate로 학습해 압력장 계산을 수십 분에서 \textbf{ms 단위}로 단축(\textbf{약 15,000배 가속}; surrogate 단독 및 \textbf{NVIDIA Newton} (VBD) 시뮬레이션 위 잔차 보정 방식) --- FEM으로는 불가능한 반복 평가가 가능해져 이 surrogate를 \textbf{목적함수로 샌딩 경로를 최적화}. \textbf{NVIDIA 본사 워크숍}에서 발표 및 기술 교류}
-        \resumeItem{\textbf{LLM + 지식 그래프} 시스템(OWL/RDF 온톨로지, 벡터+그래프+키워드 하이브리드 검색, 출처 기반 Q\&A) 및 \textbf{단안 RGB 카메라} 모방학습 파이프라인 구축(사람 시연 영상 → 포즈 추출 → 로봇 액션 공간 변환 → \textbf{VLA} 학습 데이터; \textbf{LoRA} 정책 파인튜닝)}
-        \resumeItem{AI\&SW 부문 \textbf{최우수 성과자}(2025) 선정; Stanford REAL Lab 공동 매니퓰레이션 연구 협업 제안에 참여}
+        \resumeItem{원시 3D 스캔에서 로봇 샌딩 \textbf{coverage path를 자동 생성}해 2--4시간 수작업을 5--15초 파이프라인으로 대체(\textbf{99\% 이상 단축}) --- RBF 표면 복원(RMSE 0.5\,mm 이하), \textbf{곡률 적응형 경로 최적화}, 표면 법선 정렬 공구 자세(tangent--normal--binormal 프레임); 경계 마스킹 벡터화로 100--1,000배 가속, RMSE·MAE·최대 오차를 실시간 표시하는 3D 검토 대시보드}
+        \resumeItem{경로 파이프라인을 팀의 \textbf{Agentic Robot OS}에 \textbf{agentic skill}로 통합(롤아웃 중) --- 에이전트가 경로 최적화기를 tool로 호출. 표면 피팅은 자체 개발했으며, \textbf{내부 기술 검증}에서 경쟁 외부 솔루션을 능가해 전략적 소싱 의사결정에 기여}
+        \resumeItem{로봇 샌딩 \textbf{물리 기반 표면 품질 모델} 정립 --- 접촉 압력 → accumulated work → 표면 거칠기(\textbf{Ra}) 환산식을 세우고 직접 설계한 실험으로 보정 계수 산출; 데이터 전처리 후 \textbf{FEM}으로 GT 확보}
+        \resumeItem{\textbf{Surrogate 기반 경로 최적화}: FEM 데이터로 \textbf{NVIDIA PhysicsNeMo} surrogate를 학습(단독 및 \textbf{NVIDIA Newton}(VBD) 시뮬레이션 위 잔차 보정)해 압력장 1회 평가를 FEM 약 1시간에서 약 0.24초로 단축(\textbf{약 15,000배}) --- FEM으로는 너무 느려 쓸 수 없던 \textbf{샌딩 경로 최적화의 목적함수}로 사용; 생성 경로는 외란 주입·dwell 보정 스윕을 갖춘 \textbf{폐루프 시뮬레이터}로 실행 전 검증. \textbf{NVIDIA 본사 워크숍}에서 발표}
+        \resumeItem{산업용 depalletizing 비전 시스템(RealSense RGB-D → 검출·세그멘테이션 → 깊이 융합 3D 박스 포즈 → 파지 플래너)의 \textbf{검출 모델} 담당, \textbf{다중 겹침·부분 가려짐} 박스 대상 --- 2,000장 데이터셋 구축(1,600/200/200 분할, Roboflow 라벨링, mosaic·mixup·color jitter 증강); \textbf{RF-DETR}을 \textbf{LoRA}로 파인튜닝하고 SAM 세그멘테이션 헤드 결합, 겹침 박스 정밀도 기준으로 YOLO 계열 대신 선정(검증셋 \textbf{mAP@0.5 94.2\%}, mAP@0.5:0.95 78.6\%, precision 96.1\%, recall 91.8\%); 평가·서빙을 거쳐 현장 배포(통합 시스템 기준 종단 약 150\,ms, $\pm$5\,mm)}
+        \resumeItem{텔레오퍼레이션·모션캡처 장비를 대신하는 \textbf{단안 RGB 카메라 모방학습 데이터 파이프라인} 주도 개발(시연 1건의 정확도보다 수량 우선) --- 사람 시연 영상에서 \textbf{MediaPipe}로 관절을 추출하고 \textbf{TCP 기준 역기구학(IK)}을 풀어 로봇 데이터로 retargeting, 모방학습·\textbf{VLA} 학습 데이터 생성(수집 대시보드·QA 플로우); 시연 데이터를 직접 수집해 \textbf{pick-and-place 정책 모델}을 학습·파인튜닝. Stanford REAL Lab 공동 매니퓰레이션 연구 제안에 데이터 수집 인프라로 포함}
+        \resumeItem{\textbf{NVIDIA Cosmos Cookoff} 참가(NVIDIA Cosmos 활용) 및 팔레트 적재 패턴 최적화 데모 개발 --- \textbf{9종 산업용 팔레트 규격}(치수·최대 하중)을 제약 조건으로 Pinwheel·Column·Interlock 적재 패턴을 탐색해 면적 활용률·무게중심 편차·층 높이 균일성을 최적화; 3D 시각화, 로컬 LLM 분석 리포트·영상 자동 생성}
+        \resumeItem{\textbf{LLM + 지식 그래프} Q\&A 시스템 구축 --- 문서·소스 코드·Jira·Confluence를 OWL/RDF 온톨로지로 적재하는 플러그형 수집 계층, 벡터·그래프·키워드 하이브리드 검색과 출처 인용 답변, 질의·검색 결과·답변·사용자 피드백을 평가 데이터로 로깅}
+        \resumeItem{9개 레포 단독 개발·운영; 약 15개 팀 레포에서 \textbf{PR 리뷰 92건}(로봇 제어 안전 마진·타임아웃 중심); CI·테스트 표준화; RF-DETR 모델의 데이터셋 → 학습 → 평가 리포트 → 서빙 라이프사이클 구현, 팀 MLOps 스택 설계 문서 작성(DVC, Kubeflow, BentoML, Prometheus)}
       \resumeItemListEnd
 
+    \needspace{6\baselineskip}
     \resumeSubheading
       {비트센싱 (bitsensing Inc.)}{}
-      {AI Perception Engineer --- Signal Processing Team, 전문연구요원}{2023년 9월 -- 2025년 8월}
-      \resumeItemListStart
-        \resumeItem{자율주행용 \textbf{3D 레이더 퍼셉션} 개발 --- 포인트 클라우드 탐지(\textbf{PV-RCNN}), 포인트 특징 학습(\textbf{DGCNN}), 3D 다중 객체 추적(\textbf{CenterPoint-BEV}, \textbf{AB3DMOT}); 불확실성 하 4D 레이더 초해상도 DoA 추정(실환경 실험 검증)으로 \textbf{각도 해상도 2배 향상}}
-        \resumeItem{신호 잡음 제거·바이어스 보정·합성 데이터 생성 ML 파이프라인 구축; \textbf{지식 증류}, pruning, \textbf{TensorRT INT8 양자화}로 모델 압축 --- 정확도 저하 없이 실시간 임베디드 배포}
-        \resumeItem{AI 기반 신호 처리, 불확실성 정량화, 임베디드 학습 관련 \textbf{특허 7건} 출원}
-      \resumeItemListEnd
-
+      {전문연구요원 --- 병역 완료}{2022년 8월 -- 2025년 8월}
     \resumeSubSubheading
-      {Sensor Fusion Engineer --- Tracking and Application Team, 전문연구요원}{2022년 8월 -- 2023년 9월}
+      {AI Perception Engineer --- Signal Processing Team}{2023년 9월 -- 2025년 8월}
       \resumeItemListStart
-        \resumeItem{Camera/Radar \textbf{융합 퍼셉션 시스템} 구축 --- \textbf{YOLO 기반 8종 장애물 탐지}(차량·보행자·오토바이 등), \textbf{SORT/IMM/칼만} 기반 최대 \textbf{12개 차선 256대 동시 MOT}, 차선 \textbf{시맨틱 세그멘테이션}(PP-LiteSeg, U-Net), ML 기반 오탐 제거 --- 융합 RMSE \textbf{51\% 감소}}
-        \resumeItem{\textbf{양산 적용} 및 \textbf{해외 8개국 200대+ 배포}(이탈리아 베로나, 인도 델리 등); \textbf{TensorRT} 엣지 최적화로 악천후 환경에서도 안정적 성능}
-        \resumeItem{트래픽 레이더 최적 화각 유지를 위한 자동 캘리브레이션 모터 제어 로직 \textbf{개발 리딩} 및 제품화}
-        \resumeItem{센서 융합 및 확률적 객체 추적 관련 \textbf{특허 3건} 출원}
+        \resumeItem{자율주행용 4D 이미징 레이더 point cloud 기반 \textbf{3D 레이더 퍼셉션} 개발 --- 탐지(\textbf{PV-RCNN}), 포인트 특징 학습(\textbf{DGCNN}), 3D 다중 객체 추적(\textbf{CenterPoint-BEV}, \textbf{AB3DMOT})}
+        \resumeItem{\textbf{불확실성 하 DoA 추정}: 4D 이미징 레이더의 딥러닝 초해상도 도래각 추정을 언더샘플링 관측에서 각도 스펙트럼을 복원하는 \textbf{역문제}로 정식화하고 실환경 실험으로 검증 --- 기존 FFT/beamforming 대비 \textbf{각도 해상도 2배}}
+        \resumeItem{신호 잡음 제거·바이어스 보정·합성 데이터 생성 ML 파이프라인 구축; \textbf{지식 증류}, pruning, \textbf{TensorRT INT8 양자화}로 모델을 압축해 \textbf{NVIDIA Jetson}(C++)에 정확도 저하 없이 실시간 임베디드 배포}
+        \resumeItem{AI 기반 신호 처리, 불확실성 정량화, 임베디드 학습 관련 \textbf{특허 출원 7건}}
       \resumeItemListEnd
 
+    \needspace{5\baselineskip}
+    \resumeSubSubheading
+      {Sensor Fusion Engineer --- Tracking and Application Team}{2022년 8월 -- 2023년 9월}
+      \resumeItemListStart
+        \resumeItem{Camera/Radar \textbf{융합 퍼셉션 시스템} 구축 --- \textbf{YOLO 기반 8종 장애물 탐지}(차량·보행자·오토바이 등), 차선 \textbf{시맨틱 세그멘테이션}(PP-LiteSeg, U-Net), ML 기반 오탐 제거, Camera/Radar \textbf{시간 동기화}}
+        \resumeItem{Camera/Radar 캘리브레이션을 \textbf{비선형 재투영 오차 최소화}·카메라 캘리브레이션·\textbf{다시점 기하}로 풀어 융합 RMSE \textbf{51\% 감소}}
+        \resumeItem{\textbf{대규모 다중 객체 추적}: 최대 \textbf{12개 차선 256대 동시 추적} --- 매 프레임 헝가리안 기반 SORT 할당과 \textbf{IMM/칼만} 순차 상태 추정을 결합해 임베디드 시스템에 탑재; 관련 논문: 트랙 기반 레이더·비전 융합(\textit{IEEE Sensors} '25, 공동 1저자)}
+        \resumeItem{\textbf{양산 적용}: \textbf{8개국에 레이더 200대+ 배포}, \textbf{TensorRT} 엣지 최적화로 악천후에서도 안정적 성능 유지}
+        \resumeItem{트래픽 레이더를 최적 화각으로 유지하는 자동 캘리브레이션 모터 제어 로직 \textbf{개발 리딩} 및 제품화}
+        \resumeItem{센서 융합 및 확률적 객체 추적 관련 \textbf{특허 출원 3건}}
+      \resumeItemListEnd
+
+    \needspace{5\baselineskip}
     \resumeSubheading
       {University of Pretoria}{프리토리아, 남아프리카 공화국}
       {박사과정 연구원 \& 강의 조교 (Assistant Lecturer)}{2015년 1월 -- 2021년 12월}
       \resumeItemListStart
-        \resumeItem{박사 연구: GOALS (경사 기반 선탐색 근사) 제안 --- Non-convex 고노이즈 환경에서의 학습 안정성·수렴성 개선; \textit{Applied Intelligence}, Springer Nature 게재}
-        \resumeItem{고차원 ML 최적화를 위한 부분차원 surrogate 기법 개발; \textit{Advances in AI Reviews}, IFSA 게재}
-        \resumeItem{FEM 시뮬레이션 기반 최적 센서 배치 연구 (역문제 및 랭크-분산 정식화, 후보 배치 약 $10^{26}$가지); \textit{Engineering Structures}, Elsevier 게재}
-        \resumeItem{학사 논문: \textbf{FEM 기반 토폴로지 최적화} --- compliant plier의 힘 전달 효율을 목적함수로 위상 최적 설계, 3D 프린팅 후 strain 센서로 실측 검증}
-        \resumeItem{\textbf{Assistant Lecturer}: 학부 공학생 대상 수치 최적화 및 수치해석 강의}
-        \resumeItem{학부·석사 전 과정(3개 학위) \textbf{Cum Laude} 졸업}
+        \resumeItem{박사 연구: \textbf{GOALS}(Gradient-Only Approximations for Line Searches) 제안 --- 방향 도함수의 부호 변화만으로 스텝 크기를 정해 불연속·확률적 손실에서도 딥러닝 학습을 안정적·일관되게 함; \textit{Applied Intelligence}(Springer Nature) 게재}
+        \resumeItem{\textbf{부분차원 surrogate} 개발 --- 함수 평가 예산이 제한된 고차원 ML 최적화를 저차원 부분공간 근사로 분해; \textit{Advances in AI Reviews}(IFSA) 게재}
+        \resumeItem{FEM 시뮬레이션 기반 \textbf{최적 센서 배치}를 역문제이자 예산 제약 \textbf{조합 선택} 문제(후보 배치 약 $10^{26}$가지)로 정식화하고 랭크-분산 휴리스틱으로 해결; \textit{Engineering Structures}(Elsevier) 게재}
+        \resumeItem{학사 논문(2014): \textbf{FEM 기반 토폴로지 최적화} --- compliant plier의 힘 전달 효율을 목적함수로 위상 최적 설계, 3D 프린팅 후 strain gauge로 실측 검증}
+        \resumeItem{\textbf{Assistant Lecturer}: 학부 공학생 대상 수치 최적화·수치해석 영어 강의}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
 
 %-----------학력-----------
+\needspace{5\baselineskip}
 \section{학력}
   \resumeSubHeadingListStart
-    \resumeSubheading
-      {University of Pretoria}{남아프리카 공화국}
-      {공학박사 (Ph.D.), 기계공학}{2017 -- 2021}
-    \resumeSubheading
-      {University of Pretoria}{남아프리카 공화국}
-      {공학석사 (MEng), 기계공학 \normalfont{--- Cum Laude}}{2016}
-    \resumeSubheading
-      {University of Pretoria}{남아프리카 공화국}
-      {공학학사 우등 (BEng Honours), 기계공학 \normalfont{--- Cum Laude}}{2015}
-    \resumeSubheading
-      {University of Pretoria}{남아프리카 공화국}
-      {공학학사 (BEng), 기계공학 \normalfont{--- Cum Laude}}{2011 -- 2014}
+    \item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{University of Pretoria} & 남아프리카 공화국 \\
+      \textit{\small 공학박사 (Ph.D.), 기계공학 --- 수치 최적화} & \textit{\small 2017 -- 2021} \\
+      \textit{\small 공학석사 (MEng), 기계공학} {\small --- Cum Laude} & \textit{\small 2016} \\
+      \textit{\small 공학학사 우등 (BEng Honours), 기계공학} {\small --- Cum Laude} & \textit{\small 2015} \\
+      \textit{\small 공학학사 (BEng), 기계공학} {\small --- Cum Laude} & \textit{\small 2011 -- 2014} \\
+    \end{tabular*}\vspace{-7pt}
   \resumeSubHeadingListEnd
 
 %-----------기술 스택-----------
+\needspace{5\baselineskip}
 \section{기술 스택}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{프로그래밍 언어}{: Python, C/C++, MATLAB} \\
-     \textbf{ML \& 과학 계산}{: PyTorch, Transformers (DETR/RF-DETR), CNN (YOLO), 3D/Point Cloud (PV-RCNN, CenterPoint, DGCNN), SAM, LoRA/PEFT, NVIDIA PhysicsNeMo, NVIDIA Newton, 지식 증류, TensorRT, TensorFlow, OpenCV, CUDA, ONNX, CVXPY, Stable-Baselines3, ML-Agents, MuJoCo, NumPy, SciPy, scikit-learn} \\
-     \textbf{센서}{: FMCW 레이더 (4D-Imaging), 카메라 (RGB, PTZ, RealSense, Zivid), LiDAR, IMU, GPS} \\
-     \textbf{전문 영역}{: 수치 최적화, FEM 시뮬레이션, 센서 융합, 신호 처리, 3D 퍼셉션, 포인트 클라우드 처리, 단안 뎁스 추정, Visual SLAM, 시맨틱 세그멘테이션, 자기지도 학습, 확률 모델링, 칼만 필터, 베이즈 추론, Surrogate Modeling, 강화학습} \\
-     \textbf{도구}{: Git, Docker, Linux/Unix, Jupyter, \LaTeX, VS Code, MySQL}
-    }}
+ \begin{itemize}[leftmargin=0.15in, label={}, itemsep=0pt, parsep=0pt, topsep=0pt]
+    \small{\item{\textbf{프로그래밍 언어}{: Python, C/C++, MATLAB}}}
+    \small{\item{\textbf{ML \& 과학 계산}{: PyTorch, Transformers (DETR/RF-DETR), CNN (YOLO), 3D/point cloud (PV-RCNN, CenterPoint, DGCNN), SAM, LoRA (검출 모델 파인튜닝), MediaPipe, NVIDIA PhysicsNeMo, NVIDIA Newton, 지식 증류, TensorRT, TensorFlow, OpenCV, CUDA, ONNX, CVXPY, Stable-Baselines3, ML-Agents, MuJoCo, NumPy, SciPy, scikit-learn, pandas}}}
+    \small{\item{\textbf{로보틱스}{: 모방학습 데이터(시연 영상 → 포즈 → TCP 역기구학 → 로봇 데이터), pick-and-place 정책 학습, URDF, ROS2(센서 데이터 취득용 기본 사용), coverage path planning, agentic skill·tool 연계}}}
+    \small{\item{\textbf{센서}{: FMCW 레이더 (4D-Imaging), 카메라 (RGB, PTZ, RealSense, Zivid), LiDAR, IMU, GPS}}}
+    \small{\item{\textbf{전문 영역}{: 수치 최적화, FEM 시뮬레이션, 센서 융합, Camera/Radar 시간 동기화, 카메라 캘리브레이션·다시점 기하, 신호 처리, 3D 퍼셉션, point cloud 처리, Visual SLAM, 시맨틱 세그멘테이션, 자기지도 학습, 확률 모델링, 칼만 필터, 베이즈 추론, surrogate modeling, 강화학습}}}
+    \small{\item{\textbf{도구}{: Git, GitHub Actions CI, pytest/mypy/Playwright, uv/ruff, Docker, Linux/Unix, Jupyter, Dash/Plotly, DuckDB, MySQL, HDF5, Roboflow, Ollama, \LaTeX; MLOps 설계: DVC, Kubeflow, BentoML, Prometheus}}}
+    \small{\item{\textbf{언어}{: 한국어(모국어), 영어(유창 --- 남아공에서 11년간 영어 학위 과정·강의)}}}
  \end{itemize}
 
 %-----------주요 논문-----------
+\needspace{5\baselineskip}
 \section{주요 논문}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-      \textbf{[IEEE Sensors '25]}\enspace S. Kwak, \underline{채영환}, M. Choi, et al. ``Improved accuracy of track-based integration of radar and vision sensors.'' \textit{(공동 1저자)} \\[3pt]
+      \textbf{[IEEE Sensors '25]}\enspace S. Kwak, \underline{채영환}, M. Choi, et al. ``Improved accuracy of track-based integration of radar and vision sensors.'' \textit{IEEE Sensors}. \textit{(공동 1저자)} \\[3pt]
       \textbf{[IEEE Sensors '24]}\enspace C. Park, H.I. Baek, \underline{채영환}, H.S. Lim, et al. ``Deep learning-based kick motion recognition in millimeter wave band radar system.'' \textit{IEEE Sensors}. \\[3pt]
       \textbf{[IEEE RadarConf '24]}\enspace H.I. Baek, \underline{채영환}, H.S. Lim, et al. ``Implementation of deep learning-based kick gesture recognition using 60 GHz radar sensor.'' \\[3pt]
-      \textbf{[Springer Nature '23]}\enspace \underline{채영환}, D.N. Wilke, D. Kafka. ``Gradient-only surrogate to resolve learning rates for robust and consistent training of deep neural networks.'' \textit{Applied Intelligence}. \\[3pt]
-      \textbf{[IFSA '19]}\enspace \underline{채영환}, D.N. Wilke. ``Sub-dimensional surrogates to solve high-dimensional optimization problems in machine learning.'' \textit{Advances in AI Reviews}. \\[3pt]
-      \textbf{[Elsevier '17]}\enspace \underline{채영환}, D.N. Wilke. ``Heuristic linear algebraic rank-variance formulation for efficient sensor placement.'' \textit{Engineering Structures}. \\[6pt]
+      \textbf{[Applied Intelligence '23]}\enspace \underline{채영환}, D.N. Wilke, D. Kafka. ``Gradient-only surrogate to resolve learning rates for robust and consistent training of deep neural networks.'' \textit{Applied Intelligence} (Springer Nature). \\[3pt]
+      \textbf{[Advances in AI Reviews '19]}\enspace \underline{채영환}, D.N. Wilke. ``Sub-dimensional surrogates to solve high-dimensional optimization problems in machine learning.'' \textit{Advances in AI Reviews} (IFSA). \\[3pt]
+      \textbf{[Engineering Structures '17]}\enspace \underline{채영환}, D.N. Wilke. ``Heuristic linear algebraic rank-variance formulation for efficient sensor placement.'' \textit{Engineering Structures} (Elsevier). \\[6pt]
       \textsc{사전 공개 논문 (Preprints)} \\[2pt]
       \textbf{[arXiv '21]}\enspace \underline{채영환}, D.N. Wilke, D. Kafka. ``GOALS: Gradient-only approximations for line searches towards robust and consistent training of deep neural networks.'' arXiv:2105.10915. \textit{($\to$ Applied Intelligence, 2023 게재)} \\[3pt]
       \textbf{[arXiv '19]}\enspace \underline{채영환}. ``Empirical study towards understanding line search approximations for training neural networks.'' arXiv:1909.06893.
@@ -167,6 +179,7 @@
  \end{itemize}
 
 %-----------특허-----------
+\needspace{5\baselineskip}
 \section{특허 출원 \normalfont{\small(총 10건, 국내 및 해외 US, EP)}}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
@@ -184,15 +197,25 @@
  \end{itemize}
 
 %-----------수상-----------
+\needspace{5\baselineskip}
 \section{수상 경력}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
+      2025\enspace 연간 성과평가 최고 등급 (AI\&SW 부문) --- 두산로보틱스 \\
       2017\enspace 기계공학 석사 (MEng) 우등 학업 표창 (Academic Honorary Colours) --- University of Pretoria \\
       2016\enspace 기계공학 학사 우등 (BEng Honours) 학업 우수 증명서 (Merit Certificate for Academics) \\
       2015\enspace 기계공학 학사 우수 학업상 및 학업 표창 (Achievement Award \& Academic Honorary Colours) \\
       2011\enspace 골든 키 국제 우등 협회 회원 (Golden Key International Honour Society) \\
-      2010\enspace 남아프리카 공화국 전국 수학 올림피아드 Top 100, 주(State) 2위
+      2010\enspace 남아프리카 공화국 전국 수학 올림피아드 Top 100, 주(Province) 2위
     }}
+ \end{itemize}
+
+%-----------오픈소스 & 대외활동-----------
+\needspace{4\baselineskip}
+\section{오픈소스 \& 대외활동}
+ \begin{itemize}[leftmargin=0.15in, label={}, itemsep=2pt]
+    \small{\item{2026\enspace 넥스트증권 \textbf{API 앰배서더} --- GitHub에 공개한 퀀트 오픈소스를 보고 넥스트증권이 먼저 연락; 미국주식 REST API 베타 오픈 전 개발자 인터뷰(API 불편 사항·필수 기능 피드백) 후 앰배서더 계약}}
+    \small{\item{2025--2026\enspace 공개 퀀트 오픈소스(\href{https://github.com/younghwan91}{\underline{github.com/younghwan91}}): 키움증권 REST API 파이썬 라이브러리(pip, MCP~서버); walk-forward 결과를 시행 횟수를 반영한 Deflated Sharpe와 CSCV 기반 PBO로 과적합 검증·기각하는 미국주식 팩터 엔진; Binance 선물 백테스트·실행 엔진}}
  \end{itemize}
 
 %-------------------------------------------
