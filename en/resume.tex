@@ -125,11 +125,11 @@ Physical AI and robotics ML engineer with a PhD in numerical optimization (Mecha
     \resumeSubSubheading
       {Sensor Fusion Engineer --- Tracking and Application Team}{Aug 2022 -- Sep 2023}
       \resumeItemListStart
-        \resumeItem{Built a camera/radar \textbf{fusion perception system}: \textbf{YOLO-based 8-class obstacle detection} (vehicle, pedestrian, motorcycle, etc.), lane \textbf{semantic segmentation} (PP-LiteSeg, U-Net), ML-based false-positive removal, and camera/radar \textbf{time synchronization}}
+        \resumeItem{Built a camera/radar \textbf{fusion perception system}: \textbf{YOLO-based 8-class obstacle detection} (vehicle, pedestrian, motorcycle, etc.), lane \textbf{semantic segmentation} (PP-LiteSeg, U-Net), ML-based false-positive removal, and camera/radar \textbf{time synchronization}, with radar and camera data stored in HDF5}
         \resumeItem{Cut camera/radar fusion RMSE by \textbf{51\%} by solving the calibration as \textbf{non-linear reprojection-error minimization} with camera calibration and \textbf{multi-view geometry}; also trained multi-camera + radar BEV fusion models, both geometry-based and transformer-based (BEVFusion), with LiDAR used only as ground truth}
         \resumeItem{\textbf{Large-scale multi-object tracking} of up to \textbf{256 targets across 12 lanes}: per-frame Hungarian-based SORT assignment combined with \textbf{IMM/Kalman} sequential state estimation, running on an embedded system; related paper on track-based radar/vision fusion (\textit{IEEE Sensors Journal} '25, co-first author)}
         \resumeItem{Shipped to \textbf{mass production} (\textbf{200+ radar units in 8 countries}); \textbf{TensorRT} edge-optimized; stable in adverse weather}
-        \resumeItem{\textbf{Led} and productized auto-calibration motor control that holds the traffic radar's optimal field of view}
+        \resumeItem{\textbf{Led} and productized auto-calibration motor control that holds the traffic radar's optimal field of view; used an IMU for sensor orientation and position}
         \resumeItem{Filed \textbf{3 patent applications} in sensor fusion and probabilistic object tracking}
       \resumeItemListEnd
 
@@ -169,7 +169,7 @@ Physical AI and robotics ML engineer with a PhD in numerical optimization (Mecha
     \small{\item{\textbf{ML \& Scientific}{: PyTorch, Transformers (DETR/RF-DETR), CNNs (YOLO), 3D/Point-Cloud (PV-RCNN, CenterPoint, DGCNN), SAM, LoRA (detector fine-tuning), MediaPipe, NVIDIA PhysicsNeMo, NVIDIA Newton, Knowledge Distillation, TensorRT, TensorFlow, OpenCV, CUDA, ONNX, CVXPY, Stable-Baselines3, ML-Agents, MuJoCo, NumPy, SciPy, scikit-learn, pandas}}}
     \small{\item{\textbf{Robotics}{: imitation-learning data (demo video $\to$ pose $\to$ TCP inverse kinematics $\to$ robot data), pick-and-place policy training, URDF, ROS2 (basic use for sensor-data acquisition), coverage path planning, agentic skill/tool integration}}}
     \small{\item{\textbf{Sensors}{: FMCW Radar (4D-Imaging), Camera (RGB, PTZ, RealSense, Zivid), LiDAR (ground truth), IMU, GPS}}}
-    \small{\item{\textbf{Domains}{: Numerical Optimization, FEM Simulation, Sensor Fusion, Camera/Radar Time Synchronization, Camera Calibration \& Multi-view Geometry, Signal Processing, 3D Perception, Point Cloud Processing, Visual SLAM, Semantic Segmentation, Self-supervised Learning, Probabilistic Modeling, Kalman Filter, Bayesian Inference, Surrogate Modeling, Reinforcement Learning}}}
+    \small{\item{\textbf{Domains}{: Numerical Optimization, FEM Simulation, Sensor Fusion, Camera/Radar Time Synchronization, Camera Calibration \& Multi-view Geometry, Signal Processing, 3D Perception, Point Cloud Processing, Semantic Segmentation, Self-supervised Learning, Probabilistic Modeling, Kalman Filter, Bayesian Inference, Surrogate Modeling, Reinforcement Learning, Visual SLAM (exposure)}}}
     \small{\item{\textbf{Tools}{: Git, GitHub Actions CI, pytest/mypy/Playwright, uv/ruff, Docker, Linux/Unix, Jupyter, Dash/Plotly, DuckDB, MySQL, HDF5, Roboflow, Ollama, \LaTeX; MLOps design: DVC, Kubeflow, BentoML, Prometheus}}}
     \small{\item{\textbf{Languages}{: Korean (native), English (fluent --- 11 years of English-medium degrees and lecturing in South Africa)}}}
  \end{itemize}
