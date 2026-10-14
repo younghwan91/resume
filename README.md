@@ -40,10 +40,10 @@ Independent side projects, unrelated to my day job — applying the same optimiz
 | Project | Description |
 |---------|-------------|
 | [**binance-quant-engine**](https://github.com/younghwan91/binance-quant-engine) | Strategy-agnostic Binance USDT-M futures backtest and execution engine with no-look-ahead guarantees and backtest/live parity |
-| [**kr-quant**](https://github.com/younghwan91/kr-quant) | Korean equity investor-flow collection, Wyckoff-style accumulation screener, and signal validation |
+| [**swing-it**](https://github.com/younghwan91/swing-it) | KOSPI/KOSDAQ alpha validation framework — judged on the per-trade distribution with random null controls, purged CV, and Deflated Sharpe |
 | [**portfolio-research**](https://github.com/younghwan91/portfolio-research) | US equity factor engine + tactical asset allocation, gated by walk-forward validation (Deflated Sharpe, PBO) |
 
-**Supporting data infrastructure:** [kiwoom-client](https://github.com/younghwan91/kiwoom-client) · [krx-fundamentals-client](https://github.com/younghwan91/krx-fundamentals-client) · [krx-news-client](https://github.com/younghwan91/krx-news-client)
+**Supporting data infrastructure:** [quant-airflow](https://github.com/younghwan91/quant-airflow) · [krx-quant-core](https://github.com/younghwan91/krx-quant-core) · [kiwoom-client](https://github.com/younghwan91/kiwoom-client) · [krx-fundamentals-client](https://github.com/younghwan91/krx-fundamentals-client) · [krx-news-client](https://github.com/younghwan91/krx-news-client)
 
 ## Repository Layout
 
