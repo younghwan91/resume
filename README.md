@@ -2,6 +2,8 @@
 
 [![Build Resume PDFs](https://github.com/younghwan91/resume/actions/workflows/build.yml/badge.svg)](https://github.com/younghwan91/resume/actions/workflows/build.yml)
 [![Latest Release](https://img.shields.io/github/v/release/younghwan91/resume?label=latest%20release)](https://github.com/younghwan91/resume/releases/latest)
+[![GitHub stars](https://img.shields.io/github/stars/younghwan91/resume?style=social)](https://github.com/younghwan91/resume)
+[![GitHub forks](https://img.shields.io/github/forks/younghwan91/resume?style=social)](https://github.com/younghwan91/resume)
 
 PhD-trained ML/AI and optimization engineer specializing in Physical AI, sensor fusion, and real-time embedded inference, with **8 peer-reviewed publications and 10 patents**. Currently applying numerical optimization and machine learning to **quantitative trading systems**.
 
@@ -68,3 +70,9 @@ cd ko && xelatex resume.tex
 ```
 
 CI builds both versions with `latexmk` in XeLaTeX mode; using `latexmk -xelatex resume.tex` locally will more closely match the CI environment.
+
+---
+
+## ⭐ Star This Project
+
+If you find this automated LaTeX résumé workflow or the underlying project portfolio helpful, please consider giving it a **[⭐ Star](https://github.com/younghwan91/resume)** on GitHub!
