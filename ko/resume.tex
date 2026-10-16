@@ -96,7 +96,7 @@
 %-----------프로필 요약-----------
 \section{프로필 요약}
 \small{
-수치 최적화로 박사 학위를 받은 Physical AI·로보틱스 ML 엔지니어입니다(공학박사, 기계공학; \textbf{연구개발 11년} = 산업 4년 + 대학원 연구·강의 7년). 비트센싱에서는 \textbf{Camera/Radar 융합 퍼셉션}을 \textbf{양산} 배포했고(\textbf{8개국 약 200대}, 융합 RMSE \textbf{51\% 감소}), 3D 레이더 퍼셉션(\textbf{PV-RCNN}, \textbf{BEV} 추적, NVIDIA Jetson \textbf{TensorRT INT8} 배포)과 딥러닝 초해상도 DoA 추정(각도 해상도 \textbf{2배})을 개발했습니다. 두산로보틱스에서는 FEM 데이터로 학습한 \textbf{NVIDIA PhysicsNeMo} surrogate(FEM 대비 \textbf{약 15,000배} 가속)를 목적함수로 삼아 샌딩 경로를 최적화하고, 3D 스캔 기반 샌딩 경로 생성을 최적화 문제로 풀어 수작업 2--4시간을 5--15초로 줄였습니다. 또한 depalletizing \textbf{RF-DETR} 검출 모델(LoRA 파인튜닝, mAP@0.5 94.2\%)의 초기 개발에 참여했습니다. \textbf{특허 출원 10건}, \textbf{논문 6편}.
+수치 최적화로 박사 학위를 받은 Physical AI·로보틱스 ML 엔지니어입니다(공학박사, 기계공학; \textbf{연구개발 11년} = 산업 4년 + 대학원 연구·강의 7년). 비트센싱에서는 \textbf{Camera/Radar 융합 퍼셉션}을 \textbf{양산} 배포했고(\textbf{8개국 약 200대}, 융합 RMSE \textbf{51\% 감소}), 3D 레이더 퍼셉션(\textbf{PV-RCNN}, \textbf{BEV} 추적, NVIDIA Jetson \textbf{TensorRT INT8} 배포)과 딥러닝 초해상도 DoA 추정(각도 해상도 \textbf{2배})을 개발했습니다. 두산로보틱스에서는 FEM 데이터로 학습한 \textbf{NVIDIA PhysicsNeMo} surrogate(FEM 대비 \textbf{약 15,000배} 가속)를 목적함수로 삼아 샌딩 경로를 최적화하고, CAD 없이 3D 스캔에서 고속 표면 피팅을 거쳐 경로를 생성하는 최적화 파이프라인을 만들었습니다. 또한 depalletizing \textbf{RF-DETR} 검출 모델(LoRA 파인튜닝, mAP@0.5 94.2\%)의 초기 개발에 참여했습니다. \textbf{특허 출원 10건}, \textbf{논문 6편}.
 }
 
 %-----------경력-----------
@@ -107,7 +107,7 @@
       {두산로보틱스 (Doosan Robotics)}{}
       {Data Scientist \& ML Engineer (수석) --- Physical AI Platform Team (신설)}{2025년 8월 -- 현재}
       \resumeItemListStart
-        \resumeItem{원시 3D 스캔에서 로봇 샌딩 \textbf{coverage path 생성을 최적화 문제로 풀어} 2--4시간 수작업을 5--15초 파이프라인으로 대체(\textbf{99\% 이상 단축}) --- RBF 표면 복원(RMSE 0.5\,mm 이하), \textbf{곡률 적응형 경로 최적화}, 표면 법선에 정렬한 공구 자세(TNB 프레임); 경계 마스킹 벡터화로 100--1,000배 가속, RMSE·MAE·최대 오차를 실시간으로 표시하는 3D 검토 대시보드}
+        \resumeItem{\textbf{CAD 없이 원시 Point Cloud에서 고속 표면 피팅}(RBF, RMSE 0.5\,mm 이하)을 자체 개발하고, 그 위에서 로봇 샌딩 \textbf{coverage path 생성을 최적화 문제로 풀어} 수작업 경로 작성을 자동화 --- \textbf{곡률 적응형 경로 최적화}, 표면 법선에 정렬한 공구 자세(TNB 프레임); RMSE·MAE·최대 오차를 실시간으로 표시하는 3D 검토 대시보드}
         \resumeItem{경로 파이프라인을 팀의 \textbf{Agentic Robot OS}에 \textbf{agentic skill}로 통합(롤아웃 중) --- LLM 에이전트가 경로 최적화기를 tool로 호출; 자체 개발한 표면 피팅이 \textbf{내부 기술 검증}에서 경쟁 외부 솔루션을 능가해 전략적 소싱 의사결정에 기여}
         \resumeItem{로봇 샌딩의 \textbf{물리 기반 표면 품질 모델} 개발 리딩 --- 접촉 압력 → accumulated work → 표면 거칠기(\textbf{Ra}) 환산식을 단독으로 세우고 직접 설계한 실험으로 보정 계수 산출; 데이터 전처리 후 \textbf{FEM}으로 GT 확보; 샌딩 경로·모션 최적화에 강화학습 적용}
         \resumeItem{\textbf{Surrogate 기반 경로 최적화}: FEM GT의 결과를 재현하도록 \textbf{NVIDIA Newton}(VBD) 시뮬레이터 자체를 최적화(접촉 강성·감쇠·마찰 등 파라미터 보정)하고, 보정한 Newton으로 학습 데이터를 대량 생성해 \textbf{NVIDIA PhysicsNeMo} surrogate를 학습한 뒤 FEM 대비 잔차를 다시 학습한 residual surrogate로 보정해 압력장 1회 평가 시간을 FEM 약 1시간에서 약 0.24초로 단축(\textbf{약 15,000배}); 이 작업으로 \textbf{NVIDIA 본사 협업 워크숍}에 참석해 발표}
