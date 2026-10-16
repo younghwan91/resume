@@ -96,7 +96,7 @@
 %-----------프로필 요약-----------
 \section{프로필 요약}
 \small{
-수치 최적화로 박사 학위를 받은 Physical AI·로보틱스 ML 엔지니어입니다(공학박사, 기계공학; \textbf{연구개발 11년} = 산업 4년 + 대학원 연구·강의 7년). \textbf{카메라(단안·스테레오·구조광)}와 \textbf{FMCW 4D 이미징 레이더}를 직접 다룹니다. 비트센싱에서는 \textbf{Camera/Radar 융합 퍼셉션}을 \textbf{양산} 배포했고(\textbf{8개국 200대 이상}, 융합 RMSE \textbf{51\% 감소}), 3D 레이더 퍼셉션(\textbf{PV-RCNN}, \textbf{BEV} 추적, NVIDIA Jetson \textbf{TensorRT INT8} 배포)과 딥러닝 초해상도 DoA 추정(각도 해상도 \textbf{2배})을 개발했습니다. 두산로보틱스에서는 FEM 데이터로 학습한 \textbf{NVIDIA PhysicsNeMo} surrogate(FEM 대비 \textbf{약 15,000배} 가속)를 목적함수로 삼아 샌딩 경로를 최적화하고, 3D 스캔 기반 경로 생성을 자동화했습니다(2--4시간 → 5--15초). 또한 depalletizing \textbf{RF-DETR} 검출 모델(LoRA 파인튜닝, mAP@0.5 94.2\%)을 담당했고, 단안 카메라 모방학습 데이터 파이프라인과 pick-and-place 정책 학습을 구축했습니다. \textbf{특허 출원 10건}, \textbf{논문 6편}.
+수치 최적화로 박사 학위를 받은 Physical AI·로보틱스 ML 엔지니어입니다(공학박사, 기계공학; \textbf{연구개발 11년} = 산업 4년 + 대학원 연구·강의 7년). \textbf{카메라(단안·스테레오·구조광)}와 \textbf{FMCW 4D 이미징 레이더}를 직접 다룹니다. 비트센싱에서는 \textbf{Camera/Radar 융합 퍼셉션}을 \textbf{양산} 배포했고(\textbf{8개국 약 200대}, 융합 RMSE \textbf{51\% 감소}), 3D 레이더 퍼셉션(\textbf{PV-RCNN}, \textbf{BEV} 추적, NVIDIA Jetson \textbf{TensorRT INT8} 배포)과 딥러닝 초해상도 DoA 추정(각도 해상도 \textbf{2배})을 개발했습니다. 두산로보틱스에서는 FEM 데이터로 학습한 \textbf{NVIDIA PhysicsNeMo} surrogate(FEM 대비 \textbf{약 15,000배} 가속)를 목적함수로 삼아 샌딩 경로를 최적화하고, 3D 스캔 기반 경로 생성을 자동화했습니다(2--4시간 → 5--15초). 또한 depalletizing \textbf{RF-DETR} 검출 모델(LoRA 파인튜닝, mAP@0.5 94.2\%)을 담당했고, 단안 카메라 모방학습 데이터 파이프라인과 pick-and-place 정책 학습을 구축했습니다. \textbf{특허 출원 10건}, \textbf{논문 6편}.
 }
 
 %-----------경력-----------
@@ -138,7 +138,7 @@
         \resumeItem{Camera/Radar \textbf{융합 퍼셉션 시스템} 구축 --- \textbf{YOLO 기반 8종 장애물 탐지}(차량·보행자·오토바이 등), 차선 \textbf{시맨틱 세그멘테이션}(PP-LiteSeg, U-Net), ML 기반 오탐 제거와 레이더 객체 인식 오탐·미탐 사례 수집·분류, Camera/Radar \textbf{시간 동기화} --- 레이더·카메라 레코딩(HDF5)을 서버에 적재하고 시간 동기화해 분석·알고리즘 개발에 사용}
         \resumeItem{Camera/Radar 캘리브레이션을 \textbf{비선형 재투영 오차 최소화}·카메라 캘리브레이션·\textbf{다시점 기하}로 풀어 융합 RMSE \textbf{51\% 감소}; 다중 카메라 + 레이더 BEV 융합 모델을 기하 기반과 트랜스포머 기반(BEVFusion) 두 방식으로 학습해 3D 박스(위치·방향) 추정(LiDAR는 GT로만 사용)}
         \resumeItem{\textbf{대규모 다중 객체 추적}: \textbf{12개 차선에서 최대 256대 동시 추적} --- 매 프레임 헝가리안 기반 SORT 할당과 \textbf{IMM/칼만} 순차 상태 추정을 결합해 임베디드 시스템에 탑재; 관련 논문: 트랙 기반 레이더·비전 융합(\textit{IEEE Sensors Journal} '25, 공동 1저자)}
-        \resumeItem{\textbf{양산 적용}: \textbf{8개국에 레이더 200대 이상 배포}; \textbf{TensorRT} 엣지 최적화; 악천후에서도 안정적 성능 유지}
+        \resumeItem{\textbf{양산 적용}: \textbf{8개국에 레이더 약 200대 배포}; \textbf{TensorRT} 엣지 최적화; 악천후에서도 안정적 성능 유지}
         \resumeItem{트래픽 레이더를 최적 화각으로 유지하는 자동 캘리브레이션 모터 제어 로직 \textbf{개발 주도} 및 제품화; IMU로 센서 방향·위치 파악}
         \resumeItem{센서 융합 및 확률적 객체 추적 관련 \textbf{특허 출원 3건}}
       \resumeItemListEnd
@@ -189,15 +189,15 @@
 \section{주요 논문}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-      \textbf{[IEEE Sensors Journal '25]}\enspace S. Kwak, \underline{채영환}, M. Choi, et al. ``Improved accuracy of track-based integration of radar and vision sensors.'' \textit{IEEE Sensors Journal}, vol. 25, no. 10. \textit{(공동 1저자)} \\[3pt]
-      \textbf{[IEEE Sensors Journal '24]}\enspace C. Park, H.I. Baek, \underline{채영환}, H.S. Lim, et al. ``Deep learning-based kick motion recognition in millimeter wave band radar system.'' \textit{IEEE Sensors Journal}, vol. 24, no. 19. \\[3pt]
-      \textbf{[IEEE RadarConf '24]}\enspace H.I. Baek, \underline{채영환}, H.S. Lim, et al. ``Implementation of deep learning-based kick gesture recognition using 60 GHz radar sensor.'' \\[3pt]
-      \textbf{[Applied Intelligence '23]}\enspace \underline{채영환}, D.N. Wilke, D. Kafka. ``Gradient-only surrogate to resolve learning rates for robust and consistent training of deep neural networks.'' \textit{Applied Intelligence} (Springer Nature). \\[3pt]
-      \textbf{[Advances in AI Reviews '19]}\enspace \underline{채영환}, D.N. Wilke. ``Sub-dimensional surrogates to solve high-dimensional optimization problems in machine learning.'' \textit{Advances in AI Reviews} (IFSA). \\[3pt]
-      \textbf{[Engineering Structures '17]}\enspace \underline{채영환}, D.N. Wilke. ``Heuristic linear algebraic rank-variance formulation for efficient sensor placement.'' \textit{Engineering Structures} (Elsevier). \\[6pt]
+      \textbf{[IEEE Sensors Journal '25]}\enspace S. Kwak, \underline{Y. Chae}, M. Choi, et al. ``Improved accuracy of track-based integration of radar and vision sensors.'' \textit{IEEE Sensors Journal}, vol. 25, no. 10. \textit{(공동 1저자)} \\[3pt]
+      \textbf{[IEEE Sensors Journal '24]}\enspace C. Park, H.I. Baek, \underline{Y. Chae}, H.S. Lim, et al. ``Deep learning-based kick motion recognition in millimeter wave band radar system.'' \textit{IEEE Sensors Journal}, vol. 24, no. 19. \\[3pt]
+      \textbf{[IEEE RadarConf '24]}\enspace H.I. Baek, \underline{Y. Chae}, H.S. Lim, et al. ``Implementation of deep learning-based kick gesture recognition using 60 GHz radar sensor.'' \\[3pt]
+      \textbf{[Applied Intelligence '23]}\enspace \underline{Y. Chae}, D.N. Wilke, D. Kafka. ``Gradient-only surrogate to resolve learning rates for robust and consistent training of deep neural networks.'' \textit{Applied Intelligence} (Springer Nature). \\[3pt]
+      \textbf{[Advances in AI Reviews '19]}\enspace \underline{Y. Chae}, D.N. Wilke. ``Sub-dimensional surrogates to solve high-dimensional optimization problems in machine learning.'' \textit{Advances in AI Reviews} (IFSA). \\[3pt]
+      \textbf{[Engineering Structures '17]}\enspace \underline{Y. Chae}, D.N. Wilke. ``Heuristic linear algebraic rank-variance formulation for efficient sensor placement.'' \textit{Engineering Structures} (Elsevier). \\[6pt]
       \textsc{사전 공개 논문 (Preprints)} \\[2pt]
-      \textbf{[arXiv '21]}\enspace \underline{채영환}, D.N. Wilke, D. Kafka. ``GOALS: Gradient-only approximations for line searches towards robust and consistent training of deep neural networks.'' arXiv:2105.10915. \textit{($\to$ Applied Intelligence, 2023 게재)} \\[3pt]
-      \textbf{[arXiv '19]}\enspace \underline{채영환}. ``Empirical study towards understanding line search approximations for training neural networks.'' arXiv:1909.06893.
+      \textbf{[arXiv '21]}\enspace \underline{Y. Chae}, D.N. Wilke, D. Kafka. ``GOALS: Gradient-only approximations for line searches towards robust and consistent training of deep neural networks.'' arXiv:2105.10915. \textit{($\to$ Applied Intelligence, 2023 게재)} \\[3pt]
+      \textbf{[arXiv '19]}\enspace \underline{Y. Chae}. ``Empirical study towards understanding line search approximations for training neural networks.'' arXiv:1909.06893.
     }}
  \end{itemize}
 
