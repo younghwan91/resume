@@ -115,7 +115,7 @@
         \resumeItem{텔레오퍼레이션 장비와 모션캡처 장비를 대신하는 \textbf{단안 RGB 카메라 모방학습 데이터 파이프라인} 주도 개발 --- 사람 시연 영상에서 \textbf{MediaPipe}로 관절을 추출하고 \textbf{TCP 기준 역기구학(IK)}을 풀어 로봇 데이터로 retargeting, 모방학습·\textbf{VLA} 학습 데이터 생성(수집 대시보드·QA 플로우); 시연 데이터 직접 수집}
         \resumeItem{\textbf{NVIDIA Cosmos Cookoff}에 참가(NVIDIA Cosmos 활용)해 팔레트 적재 패턴 최적화 데모 개발 --- \textbf{9종 산업용 팔레트 규격}(치수·최대 하중)을 제약 조건으로 Pinwheel·Column·Interlock 적재 패턴을 탐색해 면적 활용률·무게중심 편차·층 높이 균일성을 최적화; 3D 시각화, 로컬 LLM 분석 리포트(프롬프트 튜닝)·영상 자동 생성; \textbf{MuJoCo}로 박스 크기·적재 조합을 다양하게 바꾼 스택 데이터를 생성하고, Cosmos로 조명·배치·물체 종류를 바꾼 데이터 증강도 시험}
         \resumeItem{\textbf{LLM + 지식 그래프} Q\&A 시스템 구축 --- 문서·소스 코드·Jira·Confluence를 OWL/RDF 온톨로지로 적재하는 플러그형 수집 계층; 벡터·그래프·키워드 하이브리드 검색과 출처를 인용한 답변; 질의·검색 결과·답변·사용자 피드백을 평가 데이터로 로깅}
-        \resumeItem{RF-DETR 모델의 데이터셋 → 학습 → 평가 리포트 흐름 구현; 팀 MLOps 스택 설계 문서 작성(DVC, Kubeflow, BentoML, Prometheus)}
+        \resumeItem{RF-DETR 모델의 데이터셋 → 학습 → 평가 리포트 파이프라인 구현}
       \resumeItemListEnd
 
     \needspace{6\baselineskip}
@@ -180,7 +180,7 @@
     \small{\item{\textbf{로보틱스}{: 모방학습 데이터(시연 영상 → 포즈 → TCP 역기구학 → 로봇 데이터), 텔레오퍼레이션 장비 사용 경험, URDF, ROS2(센서 데이터 취득용 기본 사용), coverage path planning, agentic skill·tool 연계}}}
     \small{\item{\textbf{센서}{: FMCW 레이더(4D-Imaging), 카메라(RGB, PTZ), LiDAR(GT 용도), IMU, GPS}}}
     \small{\item{\textbf{전문 영역}{: 수치 최적화, FEM 시뮬레이션, 센서 융합, Camera/Radar 시간 동기화, 카메라 캘리브레이션·다시점 기하, 신호 처리, 3D 퍼셉션, point cloud 처리, 시맨틱 세그멘테이션, 자기지도 학습, 확률 모델링, 칼만 필터, 베이즈 추론, surrogate modeling, 강화학습, Visual SLAM(사용해 봄)}}}
-    \small{\item{\textbf{도구}{: Git, GitHub Actions CI, pytest/mypy/Playwright, uv/ruff, Docker, Linux/Unix, Jupyter, Dash/Plotly, DuckDB, MySQL, HDF5, Roboflow, Ollama, \LaTeX; MLOps 설계: DVC, Kubeflow, BentoML, Prometheus}}}
+    \small{\item{\textbf{도구}{: Git, GitHub Actions CI, pytest/mypy/Playwright, uv/ruff, Docker, Linux/Unix, Jupyter, Dash/Plotly, DuckDB, MySQL, HDF5, Roboflow, Ollama, \LaTeX}}}
     \small{\item{\textbf{언어}{: 한국어(모국어), 영어(유창 --- 남아프리카 공화국에서 11년간 영어 학위 과정·강의)}}}
  \end{itemize}
 
