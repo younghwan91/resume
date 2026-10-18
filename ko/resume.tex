@@ -49,7 +49,7 @@
 
 \urlstyle{same}
 \raggedbottom
-\raggedright
+% \raggedright  (양쪽 정렬로 변경)
 \setlength{\tabcolsep}{0in}
 
 \titleformat{\section}{
@@ -82,6 +82,7 @@
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
+\AtBeginDocument{\XeTeXlinebreakpenalty=10000 \emergencystretch=1.5em}
 \begin{document}
 
 %-----------헤더-----------
