@@ -109,12 +109,12 @@
       \resumeItemListStart
         \resumeItem{\textbf{CAD 없이 원시 Point Cloud에서 고속 표면 피팅}(RBF, RMSE 0.5\,mm 이하)을 자체 개발하고, 그 위에서 로봇 샌딩 \textbf{coverage path 생성을 최적화 문제로 풀어} 수작업 경로 작성을 자동화 --- \textbf{곡률 적응형 경로 최적화}, 표면 법선에 정렬한 공구 자세(TNB 프레임); RMSE, MAE, 최대 오차를 실시간으로 표시하는 3D 검토 대시보드}
         \resumeItem{로봇 샌딩의 \textbf{물리 기반 표면 품질 모델} 개발 리딩 --- 접촉 압력 → accumulated work → 표면 거칠기(\textbf{Ra}) 환산식을 단독으로 세우고, 직접 설계한 실험으로 보정 계수를 산출한 뒤 \textbf{FEM}으로 GT 확보}
-        \resumeItem{\textbf{Surrogate 기반 샌딩 경로 최적화}(피팅한 표면 위에서) --- FEM GT를 재현하도록 \textbf{NVIDIA Newton}(VBD) 시뮬레이터 자체를 최적화(접촉 강성, 감쇠, 마찰 등)하고, 이 Newton으로 학습 데이터를 대량 생성해 \textbf{NVIDIA PhysicsNeMo} surrogate와 FEM 잔차를 학습한 residual surrogate 구축(압력장 1회 평가 FEM 약 1시간 → 약 0.24초, \textbf{약 15,000배}); 경로와 모션 최적화에는 강화학습도 적용. 이 작업으로 \textbf{NVIDIA 본사 협업 워크숍}에서 발표}
+        \resumeItem{\textbf{Surrogate 기반 샌딩 경로 최적화}(피팅한 표면 위에서) --- FEM GT를 재현하도록 \textbf{NVIDIA Newton}(VBD)의 물리 파라미터(접촉 강성, 감쇠, 마찰 등)를 보정(calibration)하고, 이 Newton으로 학습 데이터를 대량 생성해 \textbf{NVIDIA PhysicsNeMo} surrogate와 FEM 잔차를 학습한 residual surrogate 구축(압력장 1회 평가 FEM 약 1시간 → 약 0.24초, \textbf{약 15,000배}); 이 surrogate로 \textbf{Ra가 목표 범위 안에 들어오도록} 경로를 최적화하고, 경로와 모션 최적화에는 강화학습도 적용. 이 작업으로 \textbf{NVIDIA 본사 협업 워크숍}에서 발표}
         \resumeItem{\textbf{LLM 에이전트 tool 오케스트레이션}(\textbf{Agentic Robot OS}) --- 작업 지시를 받으면 에이전트가 비전으로 대상을 확인하고, 표면 피팅을 실행한 뒤, 샌딩 tool로 로봇을 움직이도록 여러 tool의 순서를 판단해 호출하는 로직과 샌딩 tool, \textbf{agentic skill}을 개발; 자체 개발한 표면 피팅은 \textbf{내부 기술 검증}에서 경쟁 외부 솔루션을 능가해 전략적 소싱 의사결정에 기여}
         \resumeItem{산업용 depalletizing 비전 시스템 \textbf{초기 단계 참여} --- \textbf{겹치거나 부분적으로 가려진} 박스 검출을 위해 \textbf{RF-DETR}을 \textbf{LoRA}로 파인튜닝하고 SAM 세그멘테이션까지 학습해 검출 성능 향상(검증셋 \textbf{mAP@0.5 94.2\%}); 데이터셋 → 학습 → 평가 리포트 파이프라인 구현}
         \resumeItem{텔레오퍼레이션 및 모션캡처 장비를 대신하는 \textbf{단안 RGB 카메라 모방학습 데이터 파이프라인} 주도 개발 --- 사람 시연 영상에서 \textbf{MediaPipe}로 관절을 추출하고 \textbf{TCP 기준 역기구학(IK)}으로 로봇 데이터에 retargeting해 모방학습 및 \textbf{VLA} 학습 데이터 생성; 수집 대시보드와 QA 플로우를 만들고 시연 데이터도 직접 수집}
         \resumeItem{\textbf{NVIDIA Cosmos Cookoff} 참가 데모 개발 --- \textbf{9종 산업용 팔레트 규격}(치수, 최대 하중)을 제약으로 적재 패턴을 최적화(면적 활용률, 무게중심 편차, 층 높이 균일성)하고, 3D 시각화와 로컬 NVIDIA Cosmos 리포트(프롬프트 튜닝), 영상 자동 생성 구현; \textbf{MuJoCo}로 박스 크기와 적재 조합을 바꾼 스택 데이터를 생성하고, Cosmos로 조명, 배치, 물체 종류를 바꾼 증강을 시험}
-        \resumeItem{\textbf{LLM + 지식 그래프} Q\&A 시스템 구축 --- 문서, 소스 코드, Jira, Confluence를 OWL/RDF 온톨로지로 적재하는 플러그형 수집 계층; 벡터, 그래프, 키워드 하이브리드 검색과 출처를 인용한 답변; 질의, 검색 결과, 답변, 사용자 피드백을 평가 데이터로 로깅}
+        \resumeItem{\textbf{LLM(Claude) + 지식 그래프} Q\&A 시스템 구축 --- 문서, 소스 코드, Jira, Confluence를 OWL/RDF 온톨로지로 적재하는 플러그형 수집 계층; 벡터, 그래프, 키워드 하이브리드 검색과 출처를 인용한 답변; 질의, 검색 결과, 답변, 사용자 피드백을 평가 데이터로 로깅}
       \resumeItemListEnd
 
     \needspace{6\baselineskip}
