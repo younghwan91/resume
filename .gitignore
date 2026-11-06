@@ -10,5 +10,7 @@ private/
 # Locally built PDFs (CI builds and releases these)
 en/resume.pdf
 ko/resume.pdf
+quant/en/resume.pdf
+quant/ko/resume.pdf
 # Orca drop zone (JD PDFs, company decks — never commit)
 .orca/

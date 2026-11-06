@@ -16,6 +16,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Check engineer/quant shared sections match
+        run: python3 scripts/check_shared.py
+
       - name: Build English resume
         uses: xu-cheng/latex-action@v3
         with:
@@ -30,10 +33,26 @@ jobs:
           working_directory: ko
           latexmk_use_xelatex: true
 
+      - name: Build English quant resume
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: resume.tex
+          working_directory: quant/en
+          latexmk_use_xelatex: true
+
+      - name: Build Korean quant resume
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: resume.tex
+          working_directory: quant/ko
+          latexmk_use_xelatex: true
+
       - name: Rename PDFs for release
         run: |
           cp en/resume.pdf resume_en.pdf
           cp ko/resume.pdf resume_ko.pdf
+          cp quant/en/resume.pdf resume_quant_en.pdf
+          cp quant/ko/resume.pdf resume_quant_ko.pdf
 
       - name: Upload PDFs as artifacts
         uses: actions/upload-artifact@v4
@@ -42,6 +61,8 @@ jobs:
           path: |
             resume_en.pdf
             resume_ko.pdf
+            resume_quant_en.pdf
+            resume_quant_ko.pdf
 
       - name: Release PDFs on push to main
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
@@ -52,4 +73,6 @@ jobs:
           files: |
             resume_en.pdf
             resume_ko.pdf
+            resume_quant_en.pdf
+            resume_quant_ko.pdf
           body: "Auto-built from latest source."

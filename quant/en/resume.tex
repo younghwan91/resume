@@ -1,0 +1,284 @@
+%-------------------------
+% Younghwan Chae - Resume (English, quant)
+% Based on jakegut/resume (MIT License)
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{geometry}
+\usepackage{needspace}
+
+\geometry{top=0.4in, bottom=0.4in, left=0.45in, right=0.45in}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\urlstyle{same}
+\raggedbottom
+% \raggedright  (양쪽 정렬로 변경)
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[itemsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+\AtBeginDocument{\emergencystretch=1.5em}
+\raggedbottom
+\begin{document}
+
+%-----------HEADING-----------
+\begin{center}
+    \textbf{\Huge \scshape Younghwan Chae} \\ \vspace{3pt}
+    \small
+    \href{mailto:chyohw97@gmail.com}{\underline{chyohw97@gmail.com}} \quad$|$\quad
+    \href{https://www.linkedin.com/in/younghwan-chae/}{\underline{linkedin.com/in/younghwan-chae}} \quad$|$\quad
+    \href{https://github.com/younghwan91}{\underline{github.com/younghwan91}}
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Summary}
+\small{
+PhD in numerical optimization (Mechanical Engineering, University of Pretoria). Doctoral research covered gradient-only line searches for stochastic or discontinuous objectives (\textbf{GOALS}) and sub-dimensional surrogate-based optimization for high-dimensional problems under a limited evaluation budget.
+
+\vspace{2pt}\noindent As personal research, built and open-sourced a quant stack for \textbf{portfolio/strategy optimization and overfitting control}: a US equity factor engine that adopts or rejects walk-forward results by \textbf{Deflated Sharpe} and \textbf{PBO}, a KOSPI/KOSDAQ alpha validation framework that enforces random negative controls in CI, a live Binance USDT-M futures system (2024--), and a Korean market data pipeline that blocks survivorship bias at the storage layer. This public work led to selection as Next Securities \textbf{API Development Ambassador} (2026).
+
+\vspace{2pt}\noindent In industry, shipped \textbf{IMM/Kalman} state estimation and camera/radar sensor fusion (fusion RMSE \textbf{$-$51\%}) to \textbf{$\sim$200 units in 8 countries} at bitsensing; at Doosan Robotics, owns the robotic sanding solution and optimizes sanding paths with \textbf{PhysicsNeMo surrogates} ($\sim$15,000$\times$ faster than FEM), bringing measured Ra within \textbf{7\%} of target. Now building LLM agent tool orchestration. \textbf{6 peer-reviewed papers}, \textbf{10 patent applications}.
+}
+
+%-----------QUANT PROJECTS-----------
+\needspace{6\baselineskip}
+\section{Quant Research Projects \normalfont{\small(personal, open source)}}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{2026\enspace \textbf{API Development Ambassador}, Next Securities --- the open-source work below (\href{https://github.com/younghwan91}{\underline{github.com/younghwan91}}) led to a developer interview ahead of the US-equity REST API beta, then an ambassador contract}}
+ \end{itemize}\vspace{-6pt}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+        {\textbf{US Factor Portfolio Optimization \& Overfitting Control} $|$ \emph{Python, DuckDB} $|$ \normalfont{\href{https://github.com/younghwan91/portfolio-research}{\underline{github}}}}{2025 -- 2026}
+        \resumeItemListStart
+          \resumeItem{Built a 158-factor declarative DSL and an expanding-window \textbf{walk-forward} optimization engine on point-in-time data including delisted names (\textbf{20,931 US tickers}, 1997--2026) --- 5-year minimum training window + 21-day embargo, parameters re-searched every fold (grid, random and GP-EI Bayesian search implemented); 543 tests}
+          \resumeItem{Adopted strategy (large-cap 5-factor + 200-day moving-average timing, equal weight), walk-forward 2002-12 to 2026-08 (24 folds, grid search with 3 trials per fold = 72 trials, 15\,bps slippage): CAGR \textbf{16.34\%} vs SPY 11.66\%, Sharpe \textbf{0.727} vs 0.418, max drawdown \textbf{$-$24.3\%} vs $-$55.2\%}
+          \resumeItem{Ran \textbf{Deflated Sharpe} charged for N trials and \textbf{PBO} via CSCV as a rejection gate --- adopted strategy DSR 0.996 (72 parameter trials) and 0.982 (35 strategy trials), PBO 0.303 (35 configs, S=16); all 9 pre-registered 18-ETF tactical-allocation configs rejected at PBO 0.770, and 20+ candidates rejected at the DSR gate}
+          \resumeItem{Implemented MVO, Black-Litterman, risk parity and HRP weighting and tested them in walk-forward; none beat equal weight (1/N), so all were rejected (weighting search: CAGR 16.9\%$\to$12.7\%); retracted a micro-cap strategy when price, liquidity and slippage guards cut its Sharpe 1.047$\to$$-$0.224}
+        \resumeItemListEnd
+
+    \resumeProjectHeading
+        {\textbf{Live Crypto Futures Trading System} $|$ \emph{Python, asyncio} $|$ \normalfont{\href{https://github.com/younghwan91/binance-quant-engine}{\underline{engine (public)}}, \href{https://github.com/younghwan91/crypto-quant-insights}{\underline{research notes}}}}{2024 -- Present}
+        \resumeItemListStart
+          \resumeItem{Built and run a multi-strategy live system on Binance USDT-M perpetuals (private live system, 2,339 tests) --- exchange-side stop-loss/take-profit via Algo Orders; leverage back-solved so one stop-out loses 1\% of equity}
+          \resumeItem{Open-sourced the engine layer: backtest and live share one strategy code path and the strategy sees only completed bars, so look-ahead is blocked by construction (\textbf{binance-quant-engine}: PyPI, MCP server, 30 tests)}
+          \resumeItem{Quantified the trailing-exit gap between backtest intrabar fills and live bar-close fills over 6 years, 60 symbols and 10,791 trades (trail-exit PF 1.99$\to$1.41, 31\,bps/trade), then closed it with a server-side stop-loss ratchet}
+          \resumeItem{Strict temporal IS (2020--22) / OOS (2023--25) split: all 7 parameter variants lost 36--55\% of profit factor (IS 2.16--3.51 $\to$ OOS 1.38--1.58; none met the 0.85 OOS/IS bar); published as 14 research notes}
+        \resumeItemListEnd
+
+    \resumeProjectHeading
+        {\textbf{KOSPI/KOSDAQ Alpha Validation Framework} $|$ \emph{Python, TimescaleDB} $|$ \normalfont{\href{https://github.com/younghwan91/swing-it}{\underline{github}}}}{2026}
+        \resumeItemListStart
+          \resumeItem{Built an 8-gate review judging candidate alphas on per-trade R distributions (walk-forward reproducibility, random negative control, untouched final window, 2$\times$ cost, fragility, Deflated Sharpe with an auto-counted trial ledger, purge/embargo, universe integrity); CI lint fails the build if a study skips the shared harness or ledger; 746 tests}
+          \resumeItem{Random negative controls: a signal-free synthetic strategy reaches 5 of 6 positive folds in \textbf{46\%} of draws, so fold counts were dropped as evidence; \textbf{5 of 6 alpha hypotheses rejected} (incl.\ pre-registered institutional-flow acceleration, NO-GO), only PEAD passed; verdicts published}
+        \resumeItemListEnd
+
+    \resumeProjectHeading
+        {\textbf{Korean Market Data Pipeline} $|$ \emph{Airflow, TimescaleDB} $|$ \normalfont{\href{https://github.com/younghwan91/quant-airflow}{\underline{quant-airflow}}, \href{https://github.com/younghwan91/kiwoom-client}{\underline{kiwoom-client}}, \href{https://github.com/younghwan91/krx-fundamentals-client}{\underline{krx-fundamentals}}}}{2026}
+        \resumeItemListStart
+          \resumeItem{Loads KOSPI/KOSDAQ prices, investor flows, earnings and consensus into TimescaleDB through 21 Airflow DAGs, backfilling delisted names (4,169 delisted vs 2,646 listed) to block survivorship bias at the storage layer}
+          \resumeItem{\textbf{kiwoom-client} (PyPI): Kiwoom Securities REST library --- 182 endpoints, 19 real-time feeds, sync/async, token auto-refresh, per-TR token-bucket rate limiting with 429 back-off/retry, MCP server; \textbf{krx-fundamentals-client}: DART/KRX/Naver fundamentals in one schema}
+        \resumeItemListEnd
+
+    \resumeProjectHeading
+        {\textbf{Bensdorp Seven-System Backtester (re-implementation)} $|$ \emph{Python, pandas, NumPy} $|$ \normalfont{\href{https://github.com/younghwan91/automated-stock-trading-systems}{\underline{github}}}}{2026}
+        \resumeItemListStart
+          \resumeItem{Educational re-implementation of the 7 systems in L. Bensdorp's book (long/short, trend-following/mean-reversion, catastrophe hedge) as an event-driven backtester --- on a synthetic universe every single system stays under MAR 0.6, every combined suite clears 0.95, and max drawdown is $\sim$3$\times$ lower than the strongest single system; 31 tests}
+          \resumeItem{Robustness: circular block-bootstrap Monte Carlo (fixed 10-day blocks keep the autocorrelation i.i.d.\ resampling destroys), sizing-sensitivity grid, and walk-forward where in-sample-tuned risk only matches or trails a fixed-2\% baseline OOS --- the edge is in system design, not sizing}
+        \resumeItemListEnd
+
+  
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Doosan Robotics}{}
+      {Principal Data Scientist \& ML Engineer --- Physical AI Platform Team (newly formed)}{Aug 2025 -- Present}
+      \resumeItemListStart
+        \resumeItem{Developed \textbf{CAD-free, fast surface fitting on raw point clouds} (RBF, sub-0.5\,mm RMSE) in-house, and on top of it solved robotic-sanding \textbf{coverage-path generation} as an optimization problem, replacing manual path authoring: \textbf{curvature-adaptive path optimization} and surface-normal-aligned tool orientation (TNB frames); a 3D review dashboard with live RMSE/MAE/max error; in an \textbf{internal technical evaluation} this surface fitting outperformed a competing external solution, contributing to a strategic sourcing decision}
+        \resumeItem{Led the \textbf{physics-based surface-quality model} for robotic sanding and derived its equations single-handedly (contact pressure $\to$ accumulated work $\to$ roughness \textbf{Ra}); calibrated its constants with experiments I designed and generated \textbf{FEM} ground truth}
+        \resumeItem{\textbf{Surrogate-based sanding-path optimization (presented at an NVIDIA HQ collaboration workshop)} on the fitted surfaces: calibrated the physical parameters of the \textbf{NVIDIA Newton} (VBD) simulator (contact stiffness, damping, friction) to reproduce the FEM ground truth, used it to generate training data at scale, and built \textbf{NVIDIA PhysicsNeMo} surrogates plus a residual surrogate on the FEM residual (one pressure-field evaluation: $\sim$1\,h of FEM $\to$ $\sim$0.24\,s, \textbf{$\sim$15,000$\times$}); used the surrogate to optimize sanding paths so that \textbf{Ra falls within the target range}, validated with measured Ra (within \textbf{7\%} of target against a 10\% tolerance), and also applied reinforcement learning to path/motion optimization}
+        \resumeItem{\textbf{LLM agent tool orchestration} (\textbf{Agentic Robot OS}): built the logic by which the agent plans a task and calls tools in sequence (inspect the target with vision, run surface fitting, then drive the robot with the sanding tool), plus the sanding tool (which runs the surrogate-based path optimization internally) and \textbf{agentic skill}}
+        \resumeItem{Built an \textbf{LLM (Claude) + knowledge-graph} Q\&A system: pluggable ingestion of documents, source code, Jira, and Confluence into an OWL/RDF ontology; hybrid vector/graph/keyword retrieval with cited answers; logging of queries, retrievals, answers, and user feedback as evaluation data}
+        \resumeItem{Developed an \textbf{NVIDIA Cosmos Cookoff} entry demo: optimized pallet stacking patterns under \textbf{9 industrial pallet standards} (dimensions, max load) for area utilization, center-of-mass offset, and layer-height uniformity, with 3D visualization and auto-generated local NVIDIA Cosmos reports (prompt tuning) and video; generated \textbf{MuJoCo} box-stack data (varied sizes and stacking combinations) and tested Cosmos augmentation (lighting, placement, object type)}
+        \resumeItem{Joined the \textbf{early phase} of an industrial depalletizing vision system: fine-tuned \textbf{RF-DETR} with \textbf{LoRA} and trained SAM segmentation to improve detection of \textbf{densely stacked, partially occluded} boxes (validation set: \textbf{mAP@0.5 94.2\%}); built a dataset $\to$ training $\to$ evaluation-report pipeline}
+        \resumeItem{Primary developer of a \textbf{single-RGB-camera imitation-learning data pipeline} that replaces teleoperation and motion-capture rigs: extracts human joints from demonstration video with \textbf{MediaPipe} and retargets them to the robot via \textbf{inverse kinematics at the TCP}, producing imitation-learning / \textbf{VLA} training data; built the data-collection dashboard and QA flow (with Playwright end-to-end tests) and collected demonstration data myself}
+      \resumeItemListEnd
+
+    \needspace{6\baselineskip}
+    \resumeSubheading
+      {bitsensing Inc.}{}
+      {Technical Research Personnel (alternative military service) --- completed}{Aug 2022 -- Aug 2025}
+    \resumeSubSubheading
+      {AI Perception Engineer --- Signal Processing Team}{Sep 2023 -- Aug 2025}
+      \resumeItemListStart
+        \resumeItem{Developed \textbf{3D radar perception} for autonomous driving on 4D imaging-radar point clouds: detection (\textbf{PV-RCNN}), point-feature learning (\textbf{DGCNN}), and 3D MOT (\textbf{CenterPoint-BEV}, \textbf{AB3DMOT})}
+        \resumeItem{\textbf{DoA estimation under uncertainty}: posed deep-learning super-resolution direction-of-arrival estimation on 4D imaging radar as an \textbf{inverse problem} (recovering the angular spectrum from undersampled measurements) and validated it in real-world experiments --- \textbf{2$\times$ angular resolution} over conventional FFT/beamforming}
+        \resumeItem{Built ML pipelines for signal denoising, bias correction, and synthetic data generation; compressed models via \textbf{knowledge distillation}, pruning, and \textbf{TensorRT INT8 quantization} for real-time embedded deployment on \textbf{NVIDIA Jetson} (C++) without accuracy regression}
+        \resumeItem{Filed \textbf{7 patent applications} in AI-based signal processing, uncertainty quantification, and embedded learning}
+      \resumeItemListEnd
+
+    \needspace{5\baselineskip}
+    \resumeSubSubheading
+      {Sensor Fusion Engineer --- Tracking and Application Team}{Aug 2022 -- Sep 2023}
+      \resumeItemListStart
+        \resumeItem{Built a camera/radar \textbf{fusion perception system}: \textbf{YOLO-based 8-class obstacle detection} (vehicle, pedestrian, motorcycle, etc.), lane \textbf{semantic segmentation} (PP-LiteSeg, U-Net), and ML-based false-positive removal; collected and categorized radar object-detection FP/FN cases}
+        \resumeItem{\textbf{Camera/radar time synchronization}: uploaded radar/camera recordings (HDF5) to the server and time-synchronized them for analysis and algorithm development}
+        \resumeItem{Cut camera/radar fusion RMSE by \textbf{51\%} by solving the calibration as \textbf{non-linear reprojection-error minimization} with camera calibration and \textbf{multi-view geometry}; also trained multi-camera + radar BEV fusion models, both geometry-based and transformer-based (BEVFusion), estimating 3D boxes (position and heading), with LiDAR used only as ground truth}
+        \resumeItem{\textbf{Large-scale multi-object tracking} of up to \textbf{256 targets across 12 lanes}: per-frame Hungarian-based SORT assignment combined with \textbf{IMM/Kalman} sequential state estimation, running on an embedded system; related paper on track-based radar/vision fusion (\textit{IEEE Sensors Journal} '25, co-first author)}
+        \resumeItem{Shipped to \textbf{mass production} (\textbf{$\sim$200 radar units in 8 countries}); \textbf{TensorRT} edge-optimized; stable in adverse weather}
+        \resumeItem{\textbf{Led} and productized auto-calibration motor control that holds the traffic radar's optimal field of view; used an IMU for sensor orientation and position}
+        \resumeItem{Filed \textbf{3 patent applications} in sensor fusion and probabilistic object tracking}
+      \resumeItemListEnd
+
+    \needspace{5\baselineskip}
+    \resumeSubheading
+      {University of Pretoria}{Pretoria, South Africa}
+      {Postgraduate Researcher (MEng, PhD) \& Assistant Lecturer}{Jan 2015 -- Dec 2021}
+      \resumeItemListStart
+        \resumeItem{PhD: proposed \textbf{GOALS} (Gradient-Only Approximations for Line Searches), which sets step sizes from sign changes of the directional derivative alone, giving stable, consistent deep-network training on discontinuous, stochastic losses; published in \textit{Applied Intelligence} (Springer Nature)}
+        \resumeItem{Developed \textbf{sub-dimensional surrogates} decomposing high-dimensional ML optimization under a limited evaluation budget into low-dimensional subspace approximations; published in \textit{Advances in AI Reviews} (IFSA)}
+        \resumeItem{MEng: formulated \textbf{optimal sensor placement} on FEM simulations as an inverse problem and a budget-constrained \textbf{combinatorial selection} over $\sim$$10^{26}$ candidate layouts, solved with a rank-variance heuristic; published in \textit{Engineering Structures} (Elsevier)}
+        \resumeItem{\textbf{Assistant Lecturer}: Optimum Design and Numerical Methods (undergraduate engineering, in English)}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\needspace{5\baselineskip}
+\section{Education}
+  \resumeSubHeadingListStart
+    \item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{University of Pretoria} & Pretoria, South Africa \\
+      \textit{\small Doctor of Philosophy (PhD), Mechanical Engineering --- Numerical Optimization} & \textit{\small 2017 -- 2021} \\
+      \textit{\small Master of Engineering (MEng), Mechanical Engineering} {\small --- Cum Laude} & \textit{\small 2016} \\
+      \textit{\small Bachelor of Engineering Honours (BEng Hons), Mechanical Engineering} {\small --- Cum Laude} & \textit{\small 2015} \\
+      \textit{\small Bachelor of Engineering (BEng), Mechanical Engineering} {\small --- Cum Laude} & \textit{\small 2011 -- 2014} \\
+    \end{tabular*}\vspace{-7pt}
+      \resumeItemListStart
+        \resumeItem{Advisor (MEng, PhD): Daniel N. Wilke, co-author of \textit{Practical Mathematical Optimization} (Springer)}
+        \resumeItem{BEng thesis (2014): \textbf{FEM-based topology optimization} of a compliant plier maximizing force-transmission efficiency; 3D-printed and validated with strain gauges}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------SKILLS-----------
+\needspace{5\baselineskip}
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}, itemsep=0pt, parsep=0pt, topsep=0pt]
+    \small{\item{\textbf{Optimization}{: Problem Formulation, Constrained QP (CVXPY), Linear Assignment (Hungarian), Combinatorial Optimization (Sensor Placement, Pallet Loading), Non-convex \& Stochastic Optimization (Line Search), Multi-fidelity Surrogate-based Optimization, Bayesian Optimization, Coverage Path Planning}}}
+    \small{\item{\textbf{Quant Research}{: Walk-forward (Expanding Window, Purge/Embargo), Deflated Sharpe, PBO (CSCV), Random Negative Controls, Block-bootstrap Monte Carlo, MVO, Black-Litterman, Risk Parity, HRP, Point-in-time \& Delisting-inclusive Data}}}
+    \small{\item{\textbf{Programming}{: Python, C/C++, SQL, MATLAB}}}
+    \small{\item{\textbf{ML \& Scientific Computing}{: PyTorch, TensorFlow, RF-DETR, YOLO, SAM, MediaPipe, PV-RCNN, CenterPoint, DGCNN, LoRA, TensorRT, ONNX, CUDA, OpenCV, CalculiX (FEM), NVIDIA PhysicsNeMo, NVIDIA Newton, NVIDIA Cosmos, MuJoCo, URDF, Stable-Baselines3, ML-Agents, CVXPY, NumPy, SciPy, scikit-learn, statsmodels, pandas}}}
+    \small{\item{\textbf{LLM \& Agents}{: LLM Agent Tool Orchestration, Agentic Skill, MCP Server, RAG (Vector + Graph + Keyword Hybrid Search), OWL/RDF Ontology}}}
+    \small{\item{\textbf{Sensors}{: FMCW Radar (4D-Imaging), Camera (RGB, PTZ), LiDAR (ground truth), IMU, GPS}}}
+    \small{\item{\textbf{Domains}{: Numerical Optimization, FEM Simulation, Sensor Fusion, Camera/Radar Time Synchronization, Camera Calibration \& Multi-view Geometry, Signal Processing, 3D Perception, Point Cloud Processing, Semantic Segmentation, Self-supervised Learning, Probabilistic Modeling, Kalman Filter, Bayesian Inference, Surrogate Modeling, Reinforcement Learning, Model Compression (Distillation, Pruning, INT8)}}}
+    \small{\item{\textbf{Tools}{: Git, GitHub Actions CI, pytest, Docker, Linux, Jupyter, Dash/Plotly, Matplotlib, Airflow, PostgreSQL, TimescaleDB, DuckDB, MySQL, HDF5, asyncio, Roboflow, \LaTeX}}}
+    \small{\item{\textbf{Languages}{: Korean (native), English (fluent)}}}
+ \end{itemize}
+
+%-----------PUBLICATIONS-----------
+\needspace{5\baselineskip}
+\section{Publications}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+      \textbf{[IEEE Sensors Journal '25]}\enspace S. Kwak, \underline{Y. Chae}, M. Choi, et al. ``Improved accuracy of track-based integration of radar and vision sensors.'' \textit{IEEE Sensors Journal}, vol. 25, no. 10. \textit{(Co-first author)} \\[1pt]
+      \textbf{[IEEE Sensors Journal '24]}\enspace C. Park, H.I. Baek, \underline{Y. Chae}, H.S. Lim, et al. ``Deep learning-based kick motion recognition in millimeter wave band radar system.'' \textit{IEEE Sensors Journal}, vol. 24, no. 19. \\[1pt]
+      \textbf{[IEEE RadarConf '24]}\enspace H.I. Baek, \underline{Y. Chae}, H.S. Lim, et al. ``Implementation of deep learning-based kick gesture recognition using 60 GHz radar sensor.'' \\[1pt]
+      \textbf{[Applied Intelligence '23]}\enspace \underline{Y. Chae}, D.N. Wilke, D. Kafka. ``Gradient-only surrogate to resolve learning rates for robust and consistent training of deep neural networks.'' \textit{Applied Intelligence} (Springer Nature). \\[1pt]
+      \textbf{[Advances in AI Reviews '19]}\enspace \underline{Y. Chae}, D.N. Wilke. ``Sub-dimensional surrogates to solve high-dimensional optimization problems in machine learning.'' \textit{Advances in AI Reviews} (IFSA). \\[1pt]
+      \textbf{[Engineering Structures '17]}\enspace \underline{Y. Chae}, D.N. Wilke. ``Heuristic linear algebraic rank-variance formulation for efficient sensor placement.'' \textit{Engineering Structures} (Elsevier).
+    }}
+ \end{itemize}
+
+%-----------PATENTS-----------
+\needspace{5\baselineskip}
+\section{Patent Applications \normalfont{\small(10 filed, domestic \& international: US, EP)}}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+      \textbf{2023}\enspace Sensor fusion for accurate environment perception; object recognition for unstructured task execution \\
+      \textbf{2023}\enspace Sensor data structuring and utilization for efficient environment information processing \\
+      \textbf{2023}\enspace Sensor data quality enhancement via AI/ML-based signal processing \\
+      \textbf{2023}\enspace Data acquisition and model robustness enhancement for AI model training \\
+      \textbf{2023}\enspace Sensor data processing and perception system performance improvement \textit{(US, EP)} \\
+      \textbf{2024}\enspace Environment perception reinforcement and AI/ML-based sensor data analysis under adverse conditions \\
+      \textbf{2024}\enspace Sensor data accuracy assurance and overall reliability of control systems \\
+      \textbf{2025}\enspace Core sensor data processing for precise object localization and tracking \\
+      \textbf{2025}\enspace High-quality training data acquisition for AI model learning \\
+      \textbf{2025}\enspace Uncertainty quantification for reliable perception in uncertain environments
+    }}
+ \end{itemize}
+
+%-----------AWARDS-----------
+\needspace{5\baselineskip}
+\section{Awards \& Honors}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+      2025\enspace Top rating in the annual performance review (AI\&SW Division) --- Doosan Robotics \\
+      2017\enspace Academic Honorary Colours, MEng --- University of Pretoria \\
+      2016\enspace Merit Certificate for Academics, BEng Honours --- University of Pretoria \\
+      2015\enspace Achievement Award \& Academic Honorary Colours, BEng --- University of Pretoria \\
+      2011\enspace Golden Key International Honour Society \\
+      2010\enspace South African National Mathematics Olympiad Top 100; 2nd in Province
+    }}
+ \end{itemize}
+
+%-------------------------------------------
+\end{document}

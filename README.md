@@ -3,7 +3,7 @@
 [![Build Resume PDFs](https://github.com/younghwan91/resume/actions/workflows/build.yml/badge.svg)](https://github.com/younghwan91/resume/actions/workflows/build.yml)
 [![Latest Release](https://img.shields.io/github/v/release/younghwan91/resume?label=latest%20release)](https://github.com/younghwan91/resume/releases/latest)
 
-PhD-trained ML/AI and optimization engineer specializing in Physical AI, sensor fusion, and real-time embedded inference, with **8 peer-reviewed publications and 10 patents**. Currently applying numerical optimization and machine learning to **quantitative trading systems**.
+PhD-trained ML/AI and optimization engineer specializing in Physical AI, sensor fusion, and real-time embedded inference, with **6 peer-reviewed publications and 10 patent applications**. Currently applying numerical optimization and machine learning to **quantitative trading systems**.
 
 **Contact:** [LinkedIn](https://www.linkedin.com/in/younghwan-chae/) · [GitHub](https://github.com/younghwan91) · [Email](mailto:chyohw97@gmail.com)
 
@@ -21,16 +21,16 @@ PhD-trained ML/AI and optimization engineer specializing in Physical AI, sensor 
 
 PDFs are built and published automatically on every push to `main`.
 
-| Version | Link |
-|---------|------|
-| English | [resume_en.pdf](https://github.com/younghwan91/resume/releases/latest/download/resume_en.pdf) |
-| Korean  | [resume_ko.pdf](https://github.com/younghwan91/resume/releases/latest/download/resume_ko.pdf) |
+| Version | English | Korean |
+|---------|---------|--------|
+| Engineer (ML, optimization, Physical AI) | [resume_en.pdf](https://github.com/younghwan91/resume/releases/latest/download/resume_en.pdf) | [resume_ko.pdf](https://github.com/younghwan91/resume/releases/latest/download/resume_ko.pdf) |
+| Quant (quant research projects first) | [resume_quant_en.pdf](https://github.com/younghwan91/resume/releases/latest/download/resume_quant_en.pdf) | [resume_quant_ko.pdf](https://github.com/younghwan91/resume/releases/latest/download/resume_quant_ko.pdf) |
 
 ## Highlights
 
 - **4D radar DoA estimation** — 2× angular resolution over the prior baseline
 - **Radar-camera fusion** — 51% reduction in measurement error
-- **8 peer-reviewed papers** (IEEE/Springer) and **10 patents**
+- **6 peer-reviewed papers** (IEEE/Springer/Elsevier) and **10 patent applications**
 - Core competencies: numerical optimization · sensor fusion · computer vision · embedded inference
 
 ## Selected Projects
@@ -49,8 +49,10 @@ Independent side projects, unrelated to my day job — applying the same optimiz
 
 ```
 resume/
-├── en/resume.tex              # English version (source)
-├── ko/resume.tex              # Korean version (source, requires kotex)
+├── en/resume.tex              # Engineer version, English
+├── ko/resume.tex              # Engineer version, Korean (requires kotex)
+├── quant/en/resume.tex        # Quant version, English
+├── quant/ko/resume.tex        # Quant version, Korean (requires kotex)
 └── .github/workflows/
     └── build.yml               # CI: builds and releases PDFs on push to main
 ```
@@ -60,12 +62,12 @@ resume/
 **Requirements:** a LaTeX distribution with XeLaTeX support (e.g., [TeX Live](https://www.tug.org/texlive/) or [MiKTeX](https://miktex.org/)).
 
 ```bash
-# English version
+# English / Korean engineer versions (Korean requires the kotex package)
 cd en && xelatex resume.tex
-
-# Korean version (requires the kotex package)
 cd ko && xelatex resume.tex
+
+# Quant versions: same, in quant/en and quant/ko
 ```
 
-CI builds both versions with `latexmk` in XeLaTeX mode; using `latexmk -xelatex resume.tex` locally will more closely match the CI environment.
+CI builds all four files with `latexmk` in XeLaTeX mode; using `latexmk -xelatex resume.tex` locally will more closely match the CI environment.
 

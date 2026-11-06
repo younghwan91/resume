@@ -1,5 +1,5 @@
 %-------------------------
-% 채영환 (Younghwan Chae) - 이력서 (국문)
+% 채영환 (Younghwan Chae) - 이력서 (국문, 엔지니어판)
 %-------------------------
 
 \documentclass[a4paper,11pt]{article}
@@ -171,51 +171,15 @@
 
 %-----------개인 프로젝트-----------
 \needspace{6\baselineskip}
-\section{퀀트 리서치 프로젝트 \normalfont{\small(개인 프로젝트, 오픈소스)}}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{2026\enspace 넥스트증권 \textbf{API 개발 앰배서더} --- 아래 오픈소스(\href{https://github.com/younghwan91}{\underline{github.com/younghwan91}})를 계기로 미국주식 REST API 베타 공개 전 개발자 인터뷰를 거쳐 앰배서더 계약}}
- \end{itemize}\vspace{-6pt}
+\section{개인 프로젝트 \normalfont{\small(오픈소스)}}
   \resumeSubHeadingListStart
     \resumeProjectHeading
-        {\textbf{미국 주식 팩터 포트폴리오 최적화 및 과적합 검증 엔진} $|$ \emph{Python, DuckDB} $|$ \normalfont{\href{https://github.com/younghwan91/portfolio-research}{\underline{github}}}}{2025 -- 2026}
+        {\textbf{퀀트 최적화 스택} $|$ \normalfont{\href{https://github.com/younghwan91}{\underline{github.com/younghwan91}}} $|$ \emph{Python, SciPy, CVXPY}}{2025 -- 2026}
         \resumeItemListStart
-          \resumeItem{상장폐지 종목을 포함한 point-in-time 데이터(미국 \textbf{20,931종목}, 1997--2026) 위에 팩터 158개를 담은 선언형 DSL과 확장 윈도 \textbf{walk-forward} 최적화 엔진 구축 --- 학습 5년 + embargo 21일, 폴드마다 파라미터 재탐색(grid, random, GP-EI 베이지안 탐색 구현), 테스트 543개}
-          \resumeItem{채택 전략(대형주 5팩터 + 200일 이동평균 타이밍, 균등가중)의 walk-forward 성과(2002.12--2026.08, 24폴드, 폴드당 grid 3회 = 72회 시행, 슬리피지 15bp): CAGR \textbf{16.34\%}(SPY 11.66\%), Sharpe \textbf{0.727}(0.418), MDD \textbf{$-$24.3\%}($-$55.2\%)}
-          \resumeItem{시행 횟수를 반영한 \textbf{Deflated Sharpe}와 CSCV 기반 \textbf{PBO}로 과적합 검증 및 기각 관문 운영 --- 채택 전략 DSR 0.996(파라미터 72회), 0.982(전략 35회), PBO 0.303(35개 구성, S=16); 18개 ETF 전술배분의 사전등록 9개 구성은 PBO 0.770으로 전부 기각, DSR 관문에서 후보 20개 이상 기각}
-          \resumeItem{MVO, Black-Litterman, 리스크 패리티, HRP 비중 최적화를 구현해 walk-forward로 비교했으나 균등가중(1/N)을 넘지 못해 기각(비중 최적화 탐색 시 CAGR 16.9\%$\to$12.7\%); 최소 주가, 거래대금, 슬리피지 가드를 켜자 Sharpe 1.047$\to$$-$0.224로 무너진 마이크로캡 전략도 철회}
+          \resumeItem{\textbf{넥스트증권 API 개발 앰배서더}(2026): 데이터 수집, 백테스트, 실행 파이프라인을 GitHub에 공개한 것을 계기로 미국주식 REST API 베타 공개 전 개발자 인터뷰를 거쳐 앰배서더 계약}
+          \resumeItem{\textbf{포트폴리오와 전략 최적화}: 투자 비중은 제약 이차계획으로, 전략 파라미터는 베이지안 최적화 등으로 탐색해 시간 순 검증으로 비교하고, 시도할수록 커지는 과적합을 통계적으로 걸러 통과한 전략만 채택}
+          \resumeItem{\textbf{실운영 연결}: 백테스트와 실거래에 같은 코드를 쓰는 실행 엔진, AI 에이전트가 증권사 API를 tool로 호출할 수 있는 \textbf{MCP 서버}와 Python 라이브러리 공개}
         \resumeItemListEnd
-
-    \resumeProjectHeading
-        {\textbf{암호화폐 선물 실거래 시스템} $|$ \emph{Python, asyncio} $|$ \normalfont{\href{https://github.com/younghwan91/binance-quant-engine}{\underline{엔진 (공개)}}, \href{https://github.com/younghwan91/crypto-quant-insights}{\underline{리서치 노트}}}}{2024 -- 현재}
-        \resumeItemListStart
-          \resumeItem{Binance USDT-M 무기한 선물 멀티전략 실거래 시스템을 직접 구축 및 운용(비공개 시스템, 테스트 2,339개) --- 손절과 익절은 거래소 서버사이드 Algo Order로 걸고, 손절 1회 손실이 계좌의 1\%가 되도록 레버리지를 역산하는 리스크 기반 사이징 적용}
-          \resumeItem{백테스트와 실거래가 같은 전략 코드를 쓰고 완료된 봉만 전략에 넘겨 look-ahead 편향을 구조적으로 막는 엔진 계층을 분리해 공개(\textbf{binance-quant-engine}: PyPI, MCP 서버, 테스트 30개)}
-          \resumeItem{트레일링 청산의 실행 가정 차이(백테스트 봉 내 체결 vs 실거래 봉 마감 체결)를 6년, 60종목, 10,791건으로 정량화(트레일링 청산 Profit Factor 1.99$\to$1.41, 건당 31bp) --- 거래소 서버사이드 손절 ratchet으로 실거래 체결을 백테스트 가정에 맞춤}
-          \resumeItem{IS(2020--22)/OOS(2023--25) 시간 분할 검증으로 파라미터 변형 7개의 Profit Factor가 모두 36--55\% 하락함을 확인(IS 2.16--3.51 $\to$ OOS 1.38--1.58, 기준 OOS/IS 0.85 미달) --- 검증 결과는 리서치 노트 14편으로 공개}
-        \resumeItemListEnd
-
-    \resumeProjectHeading
-        {\textbf{국내 주식 알파 심사 프레임워크} $|$ \emph{Python, TimescaleDB} $|$ \normalfont{\href{https://github.com/younghwan91/swing-it}{\underline{github}}}}{2026}
-        \resumeItemListStart
-          \resumeItem{코스피/코스닥 후보 알파를 거래별 R 분포로 심사하는 8개 관문(walk-forward 재현성, 랜덤 음성대조, 손대지 않은 최종 구간, 비용 2배, 취약성, 시행 원장 자동 집계 Deflated Sharpe, purge/embargo, 유니버스 무결성) 구축 --- 공용 harness 미사용 또는 시행 미기록 시 CI 린트로 빌드 실패 처리; 테스트 746개}
-          \resumeItem{랜덤 음성대조로 신호 없는 합성 전략도 \textbf{46\%} 확률로 6폴드 중 5폴드 양수를 달성함을 보여 폴드 수 기준을 폐기; 알파 가설 \textbf{6건 중 5건 기각}(사전등록한 기관 수급 가속 NO-GO 포함), PEAD 1건만 통과 --- 기각 판정문까지 공개}
-        \resumeItemListEnd
-
-    \resumeProjectHeading
-        {\textbf{국내 주식 데이터 파이프라인} $|$ \emph{Airflow, TimescaleDB} $|$ \normalfont{\href{https://github.com/younghwan91/quant-airflow}{\underline{quant-airflow}}, \href{https://github.com/younghwan91/kiwoom-client}{\underline{kiwoom-client}}, \href{https://github.com/younghwan91/krx-fundamentals-client}{\underline{krx-fundamentals}}}}{2026}
-        \resumeItemListStart
-          \resumeItem{Airflow DAG 21개로 코스피/코스닥 시세, 수급, 실적, 컨센서스를 TimescaleDB에 적재하고, 상장폐지 종목(4,169개, 상장 2,646개 대비)까지 백필해 생존편향을 저장 계층에서 차단}
-          \resumeItem{\textbf{kiwoom-client}(PyPI): 키움증권 REST 182개 엔드포인트, 실시간 19종, sync/async, 토큰 자동 갱신, TR별 토큰 버킷 rate limiter, 429 백오프 재시도, MCP 서버 내장; \textbf{krx-fundamentals-client}: DART, KRX, 네이버 펀더멘털을 단일 스키마로 제공}
-        \resumeItemListEnd
-
-    \resumeProjectHeading
-        {\textbf{Bensdorp 7개 비상관 시스템 백테스터 (재구현)} $|$ \emph{Python, pandas, NumPy} $|$ \normalfont{\href{https://github.com/younghwan91/automated-stock-trading-systems}{\underline{github}}}}{2026}
-        \resumeItemListStart
-          \resumeItem{L. Bensdorp 저서의 7개 시스템(롱/숏, 추세추종/평균회귀, 재난 헤지)을 event-driven 백테스터로 교육용 재구현 --- 합성 유니버스에서 개별 시스템은 모두 MAR 0.6 미만, 결합 구성은 모두 0.95 이상, 최강 단일 시스템 대비 MDD 약 1/3; 테스트 31개}
-          \resumeItem{강건성 검증: 10일 고정 블록 순환 부트스트랩 몬테카를로(iid 리샘플링이 지우는 자기상관 보존)와 사이징 민감도 격자 수행; 리스크 비율을 IS에서 최적화해도 OOS에서는 고정 2\% 기준선과 같거나 밑돎을 walk-forward로 확인 --- 엣지는 사이징 튜닝이 아니라 시스템 설계에서 나옴}
-        \resumeItemListEnd
-
-  
   \resumeSubHeadingListEnd
 
 %-----------학력-----------
@@ -244,7 +208,6 @@
     \small{\item{\textbf{ML \& Scientific Computing}{: PyTorch, TensorFlow, RF-DETR, YOLO, SAM, MediaPipe, PV-RCNN, CenterPoint, DGCNN, LoRA, TensorRT, ONNX, CUDA, OpenCV, CalculiX (FEM), NVIDIA PhysicsNeMo, NVIDIA Newton, NVIDIA Cosmos, MuJoCo, URDF, Stable-Baselines3, ML-Agents, CVXPY, NumPy, SciPy, scikit-learn, statsmodels, pandas}}}
     \small{\item{\textbf{Optimization}{: Problem Formulation, Constrained QP (CVXPY), Linear Assignment (Hungarian), Combinatorial Optimization (Sensor Placement, Pallet Loading), Non-convex \& Stochastic Optimization (Line Search), Multi-fidelity Surrogate-based Optimization, Bayesian Optimization, Coverage Path Planning}}}
     \small{\item{\textbf{LLM \& Agents}{: LLM Agent Tool Orchestration, Agentic Skill, MCP Server, RAG (Vector + Graph + Keyword Hybrid Search), OWL/RDF Ontology}}}
-    \small{\item{\textbf{Quant Research}{: Walk-forward (Expanding Window, Purge/Embargo), Deflated Sharpe, PBO (CSCV), Random Negative Controls, Block-bootstrap Monte Carlo, MVO, Black-Litterman, Risk Parity, HRP, Point-in-time \& Delisting-inclusive Data}}}
     \small{\item{\textbf{센서}{: FMCW Radar (4D-Imaging), Camera (RGB, PTZ), LiDAR (ground truth), IMU, GPS}}}
     \small{\item{\textbf{전문 영역}{: Numerical Optimization, FEM Simulation, Sensor Fusion, Camera/Radar Time Synchronization, Camera Calibration \& Multi-view Geometry, Signal Processing, 3D Perception, Point Cloud Processing, Semantic Segmentation, Self-supervised Learning, Probabilistic Modeling, Kalman Filter, Bayesian Inference, Surrogate Modeling, Reinforcement Learning, Model Compression (Distillation, Pruning, INT8)}}}
     \small{\item{\textbf{도구}{: Git, GitHub Actions CI, pytest, Docker, Linux, Jupyter, Dash/Plotly, Matplotlib, Airflow, PostgreSQL, TimescaleDB, DuckDB, MySQL, HDF5, asyncio, Roboflow, \LaTeX}}}
