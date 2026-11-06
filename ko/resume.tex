@@ -74,6 +74,13 @@
     \end{tabular*}\vspace{-7pt}
 }
 
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
@@ -180,7 +187,9 @@
 \section{기술 스택}
  \begin{itemize}[leftmargin=0.15in, label={}, itemsep=0pt, parsep=0pt, topsep=0pt]
     \small{\item{\textbf{프로그래밍 언어}{: Python, C/C++, MATLAB}}}
-    \small{\item{\textbf{ML \& Scientific Computing}{: PyTorch, TensorFlow, RF-DETR, YOLO, SAM, MediaPipe, PV-RCNN, CenterPoint, DGCNN, LoRA, TensorRT, ONNX, CUDA, OpenCV, CalculiX (FEM), NVIDIA PhysicsNeMo, NVIDIA Newton, NVIDIA Cosmos, MuJoCo, Stable-Baselines3, ML-Agents, CVXPY, NumPy, SciPy, scikit-learn, pandas}}}
+    \small{\item{\textbf{ML \& Scientific Computing}{: PyTorch, TensorFlow, RF-DETR, YOLO, SAM, MediaPipe, PV-RCNN, CenterPoint, DGCNN, LoRA, TensorRT, ONNX, CUDA, OpenCV, CalculiX (FEM), NVIDIA PhysicsNeMo, NVIDIA Newton, NVIDIA Cosmos, MuJoCo, URDF, Stable-Baselines3, ML-Agents, CVXPY, NumPy, SciPy, scikit-learn, pandas}}}
+    \small{\item{\textbf{Optimization}{: Problem Formulation, Constrained QP (CVXPY), Linear Assignment (Hungarian), Combinatorial Optimization (Sensor Placement, Pallet Loading), Non-convex \& Stochastic Optimization (Line Search), Multi-fidelity Surrogate-based Optimization, Bayesian Optimization, Coverage Path Planning}}}
+    \small{\item{\textbf{LLM \& Agents}{: LLM Agent Tool Orchestration, Agentic Skill, MCP Server, RAG (Vector + Graph + Keyword Hybrid Search), OWL/RDF Ontology}}}
     \small{\item{\textbf{센서}{: FMCW Radar (4D-Imaging), Camera (RGB, PTZ), LiDAR (ground truth), IMU, GPS}}}
     \small{\item{\textbf{전문 영역}{: Numerical Optimization, FEM Simulation, Sensor Fusion, Camera/Radar Time Synchronization, Camera Calibration \& Multi-view Geometry, Signal Processing, 3D Perception, Point Cloud Processing, Semantic Segmentation, Self-supervised Learning, Probabilistic Modeling, Kalman Filter, Bayesian Inference, Surrogate Modeling, Reinforcement Learning, Model Compression (Distillation, Pruning, INT8)}}}
     \small{\item{\textbf{도구}{: Git, GitHub Actions CI, pytest, Docker, Linux, Jupyter, Dash/Plotly, MySQL, HDF5, Roboflow, \LaTeX}}}
@@ -233,12 +242,18 @@
     }}
  \end{itemize}
 
-%-----------오픈소스 & 대외활동-----------
-\needspace{4\baselineskip}
-\section{오픈소스 \& 대외활동}
- \begin{itemize}[leftmargin=0.15in, label={}, itemsep=2pt]
-    \small{\item{2026\enspace 넥스트증권 \textbf{API 개발 앰배서더} --- GitHub에 공개한 퀀트 오픈소스(데이터 수집, 백테스트, 실행 파이프라인; \href{https://github.com/younghwan91}{\underline{github.com/younghwan91}}); 미국주식 REST API 베타 공개 전 개발자 인터뷰를 거쳐 앰배서더 계약}}
- \end{itemize}
+%-----------개인 프로젝트-----------
+\needspace{6\baselineskip}
+\section{개인 프로젝트 \normalfont{\small(오픈소스)}}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+        {\textbf{퀀트 최적화 스택} $|$ \normalfont{\href{https://github.com/younghwan91}{\underline{github.com/younghwan91}}} $|$ \emph{Python, SciPy, CVXPY}}{2025 -- 2026}
+        \resumeItemListStart
+          \resumeItem{\textbf{넥스트증권 API 개발 앰배서더}(2026): 데이터 수집, 백테스트, 실행 파이프라인을 GitHub에 공개한 것을 계기로 미국주식 REST API 베타 공개 전 개발자 인터뷰를 거쳐 앰배서더 계약}
+          \resumeItem{\textbf{포트폴리오와 전략 최적화}: 투자 비중은 제약 이차계획으로, 전략 파라미터는 베이지안 최적화 등으로 탐색해 시간 순 검증으로 비교하고, 시도할수록 커지는 과적합을 통계적으로 걸러 통과한 전략만 채택}
+          \resumeItem{\textbf{실운영 연결}: 백테스트와 실거래에 같은 코드를 쓰는 실행 엔진, AI 에이전트가 증권사 API를 tool로 호출할 수 있는 \textbf{MCP 서버}와 Python 라이브러리 공개}
+        \resumeItemListEnd
+  \resumeSubHeadingListEnd
 
 %-------------------------------------------
 \end{document}
