@@ -71,3 +71,7 @@ cd ko && xelatex resume.tex
 
 CI builds all four files with `latexmk` in XeLaTeX mode; using `latexmk -xelatex resume.tex` locally will more closely match the CI environment.
 
+
+## License
+
+CC BY-NC-ND 4.0 — see [LICENSE](LICENSE).
