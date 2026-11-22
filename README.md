@@ -1,37 +1,33 @@
-# Younghwan Chae — Résumé
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/images/brand/wordmark-dark.svg">
+  <img alt="Younghwan Chae — Résumé" src="docs/images/brand/wordmark-light.svg" height="56">
+</picture>
 
 [![Build Resume PDFs](https://github.com/younghwan91/resume/actions/workflows/build.yml/badge.svg)](https://github.com/younghwan91/resume/actions/workflows/build.yml)
 [![Latest Release](https://img.shields.io/github/v/release/younghwan91/resume?label=latest%20release)](https://github.com/younghwan91/resume/releases/latest)
+[![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC_BY--NC--ND_4.0-lightgrey.svg)](LICENSE)
 
 PhD-trained ML/AI and optimization engineer specializing in Physical AI, sensor fusion, and real-time embedded inference, with **6 peer-reviewed publications and 10 patent applications**. Currently applying numerical optimization and machine learning to **quantitative trading systems**.
 
-**Contact:** [LinkedIn](https://www.linkedin.com/in/younghwan-chae/) · [GitHub](https://github.com/younghwan91) · [Email](mailto:chyohw97@gmail.com)
+**Contact:** [LinkedIn](https://www.linkedin.com/in/younghwan-chae/) · [GitHub](https://github.com/younghwan91) · [Homepage](https://younghwan91.github.io/) · [Email](mailto:chyohw97@gmail.com)
 
 ---
 
-## Contents
-
-- [Download](#download)
-- [Highlights](#highlights)
-- [Selected Projects](#selected-projects)
-- [Repository Layout](#repository-layout)
-- [Building Locally](#building-locally)
-
 ## Download
 
-PDFs are built and published automatically on every push to `main`.
+PDFs are built and published automatically on every push to `main` via [`.github/workflows/build.yml`](.github/workflows/build.yml).
 
 | Version | English | Korean |
 |---------|---------|--------|
-| Engineer (ML, optimization, Physical AI) | [resume_en.pdf](https://github.com/younghwan91/resume/releases/latest/download/resume_en.pdf) | [resume_ko.pdf](https://github.com/younghwan91/resume/releases/latest/download/resume_ko.pdf) |
-| Quant (quant research projects first) | [resume_quant_en.pdf](https://github.com/younghwan91/resume/releases/latest/download/resume_quant_en.pdf) | [resume_quant_ko.pdf](https://github.com/younghwan91/resume/releases/latest/download/resume_quant_ko.pdf) |
+| **Engineer** (ML, optimization, Physical AI) | [resume_en.pdf](https://github.com/younghwan91/resume/releases/latest/download/resume_en.pdf) | [resume_ko.pdf](https://github.com/younghwan91/resume/releases/latest/download/resume_ko.pdf) |
+| **Quant** (quant research projects first) | [resume_quant_en.pdf](https://github.com/younghwan91/resume/releases/latest/download/resume_quant_en.pdf) | [resume_quant_ko.pdf](https://github.com/younghwan91/resume/releases/latest/download/resume_quant_ko.pdf) |
 
 ## Highlights
 
 - **4D radar DoA estimation** — 2× angular resolution over the prior baseline
 - **Radar-camera fusion** — 51% reduction in measurement error
 - **6 peer-reviewed papers** (IEEE/Springer/Elsevier) and **10 patent applications**
-- Core competencies: numerical optimization · sensor fusion · computer vision · embedded inference
+- **Core competencies:** numerical optimization · sensor fusion · computer vision · embedded inference
 
 ## Selected Projects
 
@@ -47,14 +43,14 @@ Independent side projects, unrelated to my day job — applying the same optimiz
 
 ## Repository Layout
 
-```
+```text
 resume/
 ├── en/resume.tex              # Engineer version, English
 ├── ko/resume.tex              # Engineer version, Korean (requires kotex)
 ├── quant/en/resume.tex        # Quant version, English
 ├── quant/ko/resume.tex        # Quant version, Korean (requires kotex)
 └── .github/workflows/
-    └── build.yml               # CI: builds and releases PDFs on push to main
+    └── build.yml              # CI: builds and releases PDFs on push to main
 ```
 
 ## Building Locally
@@ -70,7 +66,6 @@ cd ko && xelatex resume.tex
 ```
 
 CI builds all four files with `latexmk` in XeLaTeX mode; using `latexmk -xelatex resume.tex` locally will more closely match the CI environment.
-
 
 ## License
 
