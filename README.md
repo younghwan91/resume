@@ -1,6 +1,6 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/images/brand/banner-dark.svg">
-  <img alt="Younghwan Chae — Résumé" src="docs/images/brand/banner-light.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/images/brand/wordmark-dark.svg">
+  <img alt="resume" src="docs/images/brand/wordmark-light.svg" height="52">
 </picture>
 
 [![Build Resume PDFs](https://github.com/younghwan91/resume/actions/workflows/build.yml/badge.svg)](https://github.com/younghwan91/resume/actions/workflows/build.yml)
