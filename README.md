@@ -1,17 +1,23 @@
+<div align="center">
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/images/brand/wordmark-dark.svg">
   <img alt="resume" src="docs/images/brand/wordmark-light.svg" height="52">
 </picture>
 
+# resume
+
+**LaTeX résumé for ML/AI, numerical optimization, and quantitative trading roles — built automatically into English and Korean PDFs.**
+
+PhD-trained ML/AI and optimization engineer specializing in Physical AI, sensor fusion, and real-time embedded inference, with **6 peer-reviewed publications and 10 patent applications**.
+
 [![Build Resume PDFs](https://github.com/younghwan91/resume/actions/workflows/build.yml/badge.svg)](https://github.com/younghwan91/resume/actions/workflows/build.yml)
 [![Latest Release](https://img.shields.io/github/v/release/younghwan91/resume?label=latest%20release)](https://github.com/younghwan91/resume/releases/latest)
 [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC_BY--NC--ND_4.0-lightgrey.svg)](LICENSE)
 
-PhD-trained ML/AI and optimization engineer specializing in Physical AI, sensor fusion, and real-time embedded inference, with **6 peer-reviewed publications and 10 patent applications**. Currently applying numerical optimization and machine learning to **quantitative trading systems**.
+[Download](#download) · [Highlights](#highlights) · [LinkedIn](https://www.linkedin.com/in/younghwan-chae/) · [GitHub](https://github.com/younghwan91) · [Homepage](https://younghwan91.github.io/) · [Email](mailto:chyohw97@gmail.com)
 
-**Contact:** [LinkedIn](https://www.linkedin.com/in/younghwan-chae/) · [GitHub](https://github.com/younghwan91) · [Homepage](https://younghwan91.github.io/) · [Email](mailto:chyohw97@gmail.com)
-
----
+</div>
 
 ## Download
 
@@ -35,7 +41,7 @@ Independent side projects, unrelated to my day job — applying the same optimiz
 
 | Project | Description |
 |---------|-------------|
-| [**binance-quant-engine**](https://github.com/younghwan91/binance-quant-engine) | Strategy-agnostic Binance USDT-M futures backtest and execution engine with no-look-ahead guarantees and backtest/live parity |
+| [**quantbox**](https://github.com/younghwan91/quantbox) | Binance USDT-M futures VR squeeze trading system with no-look-ahead guarantees and backtest/live parity |
 | [**swing-it**](https://github.com/younghwan91/swing-it) | KOSPI/KOSDAQ alpha validation framework — judged on the per-trade distribution with random null controls, purged CV, and Deflated Sharpe |
 | [**portfolio-research**](https://github.com/younghwan91/portfolio-research) | US equity factor engine + tactical asset allocation, gated by walk-forward validation (Deflated Sharpe, PBO) |
 
